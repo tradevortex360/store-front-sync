@@ -2,7 +2,7 @@
 /dist
 /node_modules
 /build
-
+/graphify-out
 # TypeScript build cache
 *.tsbuildinfo
 
