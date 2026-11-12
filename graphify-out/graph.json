@@ -9,7 +9,7 @@
       "source_file": "vitest.config.e2e.ts",
       "source_location": "L1",
       "id": "vitest_config_e2e_ts",
-      "community": 9,
+      "community": 12,
       "norm_label": "vitest.config.e2e.ts"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "vitest.config.ts",
       "source_location": "L1",
       "id": "vitest_config_ts",
-      "community": 10,
+      "community": 13,
       "norm_label": "vitest.config.ts"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "src/api/api.docs.ts",
       "source_location": "L1",
       "id": "src_api_api_docs_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "api.docs.ts"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "src/api/api.docs.ts",
       "source_location": "L3",
       "id": "api_api_docs_apidocs",
-      "community": 2,
+      "community": 3,
       "norm_label": "apidocs()"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "src/api/api.module.ts",
       "source_location": "L1",
       "id": "src_api_api_module_ts",
-      "community": 1,
+      "community": 2,
       "norm_label": "api.module.ts"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "src/api/api.module.ts",
       "source_location": "L20",
       "id": "api_api_module_apimodule",
-      "community": 1,
+      "community": 2,
       "norm_label": "apimodule"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "src/api/main.ts",
       "source_location": "L1",
       "id": "src_api_main_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "main.ts"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "src/api/main.ts",
       "source_location": "L9",
       "id": "api_main_bootstrap",
-      "community": 2,
+      "community": 3,
       "norm_label": "bootstrap()"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "src/api/health/health.controller.ts",
       "source_location": "L1",
       "id": "src_api_health_health_controller_ts",
-      "community": 1,
+      "community": 2,
       "norm_label": "health.controller.ts"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "src/api/health/health.controller.ts",
       "source_location": "L16",
       "id": "health_health_controller_healthschema",
-      "community": 1,
+      "community": 2,
       "norm_label": "healthschema()"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "src/api/health/health.controller.ts",
       "source_location": "L45",
       "id": "health_health_controller_healthcontroller",
-      "community": 1,
+      "community": 2,
       "norm_label": "healthcontroller"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "src/api/health/health.controller.ts",
       "source_location": "L46",
       "id": "health_health_controller_healthcontroller_constructor",
-      "community": 1,
+      "community": 2,
       "norm_label": ".constructor()"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "src/api/health/health.controller.ts",
       "source_location": "L69",
       "id": "health_health_controller_healthcontroller_check",
-      "community": 1,
+      "community": 2,
       "norm_label": ".check()"
     },
     {
@@ -126,16 +126,16 @@
       "source_file": "src/common/env.ts",
       "source_location": "L1",
       "id": "src_common_env_ts",
-      "community": 1,
+      "community": 2,
       "norm_label": "env.ts"
     },
     {
       "label": "parseEnv()",
       "file_type": "code",
       "source_file": "src/common/env.ts",
-      "source_location": "L32",
+      "source_location": "L42",
       "id": "common_env_parseenv",
-      "community": 1,
+      "community": 2,
       "norm_label": "parseenv()"
     },
     {
@@ -153,7 +153,7 @@
       "source_file": "src/common/swagger.ts",
       "source_location": "L1",
       "id": "src_common_swagger_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "swagger.ts"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "src/common/swagger.ts",
       "source_location": "L24",
       "id": "common_swagger_buildopenapidocument",
-      "community": 2,
+      "community": 3,
       "norm_label": "buildopenapidocument()"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "src/common/swagger.ts",
       "source_location": "L42",
       "id": "common_swagger_setupswagger",
-      "community": 2,
+      "community": 3,
       "norm_label": "setupswagger()"
     },
     {
@@ -180,16 +180,16 @@
       "source_file": "src/database/data-source.ts",
       "source_location": "L1",
       "id": "src_database_data_source_ts",
-      "community": 6,
+      "community": 0,
       "norm_label": "data-source.ts"
     },
     {
       "label": "buildDataSourceOptions()",
       "file_type": "code",
       "source_file": "src/database/data-source.ts",
-      "source_location": "L12",
+      "source_location": "L14",
       "id": "database_data_source_builddatasourceoptions",
-      "community": 1,
+      "community": 2,
       "norm_label": "builddatasourceoptions()"
     },
     {
@@ -198,7 +198,7 @@
       "source_file": "src/database/database.module.ts",
       "source_location": "L1",
       "id": "src_database_database_module_ts",
-      "community": 1,
+      "community": 2,
       "norm_label": "database.module.ts"
     },
     {
@@ -207,7 +207,7 @@
       "source_file": "src/database/database.module.ts",
       "source_location": "L19",
       "id": "database_database_module_databasemodule",
-      "community": 1,
+      "community": 2,
       "norm_label": "databasemodule"
     },
     {
@@ -216,7 +216,7 @@
       "source_file": "src/database/migrate.ts",
       "source_location": "L1",
       "id": "src_database_migrate_ts",
-      "community": 1,
+      "community": 2,
       "norm_label": "migrate.ts"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "src/database/migrate.ts",
       "source_location": "L10",
       "id": "database_migrate_migrate",
-      "community": 1,
+      "community": 2,
       "norm_label": "migrate()"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "src/database/entities/listing.entity.ts",
       "source_location": "L1",
       "id": "src_database_entities_listing_entity_ts",
-      "community": 6,
+      "community": 0,
       "norm_label": "listing.entity.ts"
     },
     {
@@ -243,8 +243,26 @@
       "source_file": "src/database/entities/listing.entity.ts",
       "source_location": "L12",
       "id": "entities_listing_entity_listing",
-      "community": 6,
+      "community": 0,
       "norm_label": "listing"
+    },
+    {
+      "label": "mismatch.entity.ts",
+      "file_type": "code",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L1",
+      "id": "src_database_entities_mismatch_entity_ts",
+      "community": 0,
+      "norm_label": "mismatch.entity.ts"
+    },
+    {
+      "label": "Mismatch",
+      "file_type": "code",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L30",
+      "id": "entities_mismatch_entity_mismatch",
+      "community": 0,
+      "norm_label": "mismatch"
     },
     {
       "label": "status-check.entity.ts",
@@ -252,7 +270,7 @@
       "source_file": "src/database/entities/status-check.entity.ts",
       "source_location": "L1",
       "id": "src_database_entities_status_check_entity_ts",
-      "community": 6,
+      "community": 0,
       "norm_label": "status-check.entity.ts"
     },
     {
@@ -261,7 +279,7 @@
       "source_file": "src/database/entities/status-check.entity.ts",
       "source_location": "L28",
       "id": "entities_status_check_entity_statuscheck",
-      "community": 6,
+      "community": 0,
       "norm_label": "statuscheck"
     },
     {
@@ -270,7 +288,7 @@
       "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
       "source_location": "L1",
       "id": "src_database_migrations_1794441600000_initialschema_ts",
-      "community": 6,
+      "community": 0,
       "norm_label": "1794441600000-initialschema.ts"
     },
     {
@@ -279,7 +297,7 @@
       "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
       "source_location": "L3",
       "id": "migrations_1794441600000_initialschema_initialschema1794441600000",
-      "community": 6,
+      "community": 0,
       "norm_label": "initialschema1794441600000"
     },
     {
@@ -288,7 +306,7 @@
       "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
       "source_location": "L6",
       "id": "migrations_1794441600000_initialschema_initialschema1794441600000_up",
-      "community": 6,
+      "community": 0,
       "norm_label": ".up()"
     },
     {
@@ -297,7 +315,43 @@
       "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
       "source_location": "L40",
       "id": "migrations_1794441600000_initialschema_initialschema1794441600000_down",
-      "community": 6,
+      "community": 0,
+      "norm_label": ".down()"
+    },
+    {
+      "label": "1794528000000-Mismatches.ts",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794528000000-Mismatches.ts",
+      "source_location": "L1",
+      "id": "src_database_migrations_1794528000000_mismatches_ts",
+      "community": 0,
+      "norm_label": "1794528000000-mismatches.ts"
+    },
+    {
+      "label": "Mismatches1794528000000",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794528000000-Mismatches.ts",
+      "source_location": "L3",
+      "id": "migrations_1794528000000_mismatches_mismatches1794528000000",
+      "community": 0,
+      "norm_label": "mismatches1794528000000"
+    },
+    {
+      "label": ".up()",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794528000000-Mismatches.ts",
+      "source_location": "L6",
+      "id": "migrations_1794528000000_mismatches_mismatches1794528000000_up",
+      "community": 0,
+      "norm_label": ".up()"
+    },
+    {
+      "label": ".down()",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794528000000-Mismatches.ts",
+      "source_location": "L32",
+      "id": "migrations_1794528000000_mismatches_mismatches1794528000000_down",
+      "community": 0,
       "norm_label": ".down()"
     },
     {
@@ -306,7 +360,7 @@
       "source_file": "src/platform-mock/main.ts",
       "source_location": "L1",
       "id": "src_platform_mock_main_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "main.ts"
     },
     {
@@ -315,7 +369,7 @@
       "source_file": "src/platform-mock/main.ts",
       "source_location": "L9",
       "id": "platform_mock_main_bootstrap",
-      "community": 2,
+      "community": 3,
       "norm_label": "bootstrap()"
     },
     {
@@ -324,7 +378,7 @@
       "source_file": "src/platform-mock/platform-mock.docs.ts",
       "source_location": "L1",
       "id": "src_platform_mock_platform_mock_docs_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "platform-mock.docs.ts"
     },
     {
@@ -333,7 +387,7 @@
       "source_file": "src/platform-mock/platform-mock.docs.ts",
       "source_location": "L3",
       "id": "platform_mock_platform_mock_docs_platformmockdocs",
-      "community": 2,
+      "community": 3,
       "norm_label": "platformmockdocs()"
     },
     {
@@ -342,7 +396,7 @@
       "source_file": "src/platform-mock/platform-mock.module.ts",
       "source_location": "L1",
       "id": "src_platform_mock_platform_mock_module_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "platform-mock.module.ts"
     },
     {
@@ -351,7 +405,7 @@
       "source_file": "src/platform-mock/platform-mock.module.ts",
       "source_location": "L12",
       "id": "platform_mock_platform_mock_module_mockhealthcontroller",
-      "community": 0,
+      "community": 1,
       "norm_label": "mockhealthcontroller"
     },
     {
@@ -360,7 +414,7 @@
       "source_file": "src/platform-mock/platform-mock.module.ts",
       "source_location": "L24",
       "id": "platform_mock_platform_mock_module_mockhealthcontroller_health",
-      "community": 0,
+      "community": 1,
       "norm_label": ".health()"
     },
     {
@@ -369,7 +423,7 @@
       "source_file": "src/platform-mock/platform-mock.module.ts",
       "source_location": "L40",
       "id": "platform_mock_platform_mock_module_platformmockmodule",
-      "community": 0,
+      "community": 1,
       "norm_label": "platformmockmodule"
     },
     {
@@ -378,7 +432,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L1",
       "id": "src_platform_mock_admin_admin_controller_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "admin.controller.ts"
     },
     {
@@ -387,7 +441,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L53",
       "id": "admin_admin_controller_admincontroller",
-      "community": 7,
+      "community": 10,
       "norm_label": "admincontroller"
     },
     {
@@ -396,7 +450,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L54",
       "id": "admin_admin_controller_admincontroller_constructor",
-      "community": 7,
+      "community": 10,
       "norm_label": ".constructor()"
     },
     {
@@ -405,7 +459,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L66",
       "id": "admin_admin_controller_admincontroller_state",
-      "community": 7,
+      "community": 10,
       "norm_label": ".state()"
     },
     {
@@ -414,7 +468,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L84",
       "id": "admin_admin_controller_admincontroller_updatedefaults",
-      "community": 7,
+      "community": 10,
       "norm_label": ".updatedefaults()"
     },
     {
@@ -423,7 +477,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L104",
       "id": "admin_admin_controller_admincontroller_updatelisting",
-      "community": 7,
+      "community": 10,
       "norm_label": ".updatelisting()"
     },
     {
@@ -432,7 +486,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L124",
       "id": "admin_admin_controller_admincontroller_clearlisting",
-      "community": 7,
+      "community": 10,
       "norm_label": ".clearlisting()"
     },
     {
@@ -441,7 +495,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L146",
       "id": "admin_admin_controller_admincontroller_setstatus",
-      "community": 7,
+      "community": 10,
       "norm_label": ".setstatus()"
     },
     {
@@ -450,7 +504,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L165",
       "id": "admin_admin_controller_admincontroller_reset",
-      "community": 7,
+      "community": 10,
       "norm_label": ".reset()"
     },
     {
@@ -459,7 +513,7 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L170",
       "id": "admin_admin_controller_admincontroller_assertlisting",
-      "community": 7,
+      "community": 10,
       "norm_label": ".assertlisting()"
     },
     {
@@ -468,7 +522,7 @@
       "source_file": "src/platform-mock/admin/admin.schemas.ts",
       "source_location": "L1",
       "id": "src_platform_mock_admin_admin_schemas_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "admin.schemas.ts"
     },
     {
@@ -477,7 +531,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.spec.ts",
       "source_location": "L1",
       "id": "src_platform_mock_chaos_chaos_service_spec_ts",
-      "community": 4,
+      "community": 1,
       "norm_label": "chaos.service.spec.ts"
     },
     {
@@ -486,7 +540,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.spec.ts",
       "source_location": "L4",
       "id": "chaos_chaos_service_spec_config",
-      "community": 4,
+      "community": 1,
       "norm_label": "config()"
     },
     {
@@ -495,7 +549,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L1",
       "id": "src_platform_mock_chaos_chaos_service_ts",
-      "community": 4,
+      "community": 1,
       "norm_label": "chaos.service.ts"
     },
     {
@@ -504,7 +558,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L32",
       "id": "chaos_chaos_service_chaosservice",
-      "community": 4,
+      "community": 1,
       "norm_label": "chaosservice"
     },
     {
@@ -513,7 +567,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L38",
       "id": "chaos_chaos_service_chaosservice_constructor",
-      "community": 4,
+      "community": 1,
       "norm_label": ".constructor()"
     },
     {
@@ -522,7 +576,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L48",
       "id": "chaos_chaos_service_chaosservice_getstate",
-      "community": 4,
+      "community": 1,
       "norm_label": ".getstate()"
     },
     {
@@ -531,7 +585,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L52",
       "id": "chaos_chaos_service_chaosservice_updatedefaults",
-      "community": 4,
+      "community": 1,
       "norm_label": ".updatedefaults()"
     },
     {
@@ -540,7 +594,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L57",
       "id": "chaos_chaos_service_chaosservice_updatelisting",
-      "community": 4,
+      "community": 1,
       "norm_label": ".updatelisting()"
     },
     {
@@ -549,7 +603,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L65",
       "id": "chaos_chaos_service_chaosservice_clearlisting",
-      "community": 4,
+      "community": 1,
       "norm_label": ".clearlisting()"
     },
     {
@@ -558,7 +612,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L71",
       "id": "chaos_chaos_service_chaosservice_reset",
-      "community": 4,
+      "community": 1,
       "norm_label": ".reset()"
     },
     {
@@ -567,7 +621,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L76",
       "id": "chaos_chaos_service_chaosservice_rulefor",
-      "community": 4,
+      "community": 1,
       "norm_label": ".rulefor()"
     },
     {
@@ -576,7 +630,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L81",
       "id": "chaos_chaos_service_chaosservice_decide",
-      "community": 4,
+      "community": 1,
       "norm_label": ".decide()"
     },
     {
@@ -585,7 +639,7 @@
       "source_file": "src/platform-mock/chaos/chaos.service.ts",
       "source_location": "L90",
       "id": "chaos_chaos_service_chaosservice_initialstate",
-      "community": 4,
+      "community": 1,
       "norm_label": ".initialstate()"
     },
     {
@@ -594,7 +648,7 @@
       "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
       "source_location": "L1",
       "id": "src_platform_mock_chaos_malformed_payloads_ts",
-      "community": 3,
+      "community": 4,
       "norm_label": "malformed-payloads.ts"
     },
     {
@@ -603,7 +657,7 @@
       "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
       "source_location": "L9",
       "id": "chaos_malformed_payloads_json",
-      "community": 3,
+      "community": 4,
       "norm_label": "json()"
     },
     {
@@ -612,7 +666,7 @@
       "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
       "source_location": "L11",
       "id": "chaos_malformed_payloads_malformedstatusbodies",
-      "community": 3,
+      "community": 4,
       "norm_label": "malformedstatusbodies()"
     },
     {
@@ -621,7 +675,7 @@
       "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
       "source_location": "L24",
       "id": "chaos_malformed_payloads_malformedlistingsbodies",
-      "community": 3,
+      "community": 4,
       "norm_label": "malformedlistingsbodies()"
     },
     {
@@ -630,7 +684,7 @@
       "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
       "source_location": "L46",
       "id": "chaos_malformed_payloads_pick",
-      "community": 3,
+      "community": 4,
       "norm_label": "pick()"
     },
     {
@@ -639,7 +693,7 @@
       "source_file": "src/platform-mock/listings/listings.controller.ts",
       "source_location": "L1",
       "id": "src_platform_mock_listings_listings_controller_ts",
-      "community": 3,
+      "community": 4,
       "norm_label": "listings.controller.ts"
     },
     {
@@ -648,7 +702,7 @@
       "source_file": "src/platform-mock/listings/listings.controller.ts",
       "source_location": "L40",
       "id": "listings_listings_controller_listingscontroller",
-      "community": 3,
+      "community": 4,
       "norm_label": "listingscontroller"
     },
     {
@@ -657,7 +711,7 @@
       "source_file": "src/platform-mock/listings/listings.controller.ts",
       "source_location": "L41",
       "id": "listings_listings_controller_listingscontroller_constructor",
-      "community": 3,
+      "community": 4,
       "norm_label": ".constructor()"
     },
     {
@@ -666,7 +720,7 @@
       "source_file": "src/platform-mock/listings/listings.controller.ts",
       "source_location": "L59",
       "id": "listings_listings_controller_listingscontroller_list",
-      "community": 3,
+      "community": 4,
       "norm_label": ".list()"
     },
     {
@@ -675,7 +729,7 @@
       "source_file": "src/platform-mock/listings/listings.controller.ts",
       "source_location": "L99",
       "id": "listings_listings_controller_listingscontroller_status",
-      "community": 3,
+      "community": 4,
       "norm_label": ".status()"
     },
     {
@@ -684,7 +738,7 @@
       "source_file": "src/platform-mock/listings/listings.schemas.ts",
       "source_location": "L1",
       "id": "src_platform_mock_listings_listings_schemas_ts",
-      "community": 3,
+      "community": 4,
       "norm_label": "listings.schemas.ts"
     },
     {
@@ -693,7 +747,7 @@
       "source_file": "src/platform-mock/listings/listings.schemas.ts",
       "source_location": "L9",
       "id": "listings_listings_schemas_localtime",
-      "community": 3,
+      "community": 4,
       "norm_label": "localtime()"
     },
     {
@@ -702,7 +756,7 @@
       "source_file": "src/platform-mock/listings/listings.schemas.ts",
       "source_location": "L26",
       "id": "listings_listings_schemas_dayslots",
-      "community": 3,
+      "community": 4,
       "norm_label": "dayslots()"
     },
     {
@@ -711,7 +765,7 @@
       "source_file": "src/platform-mock/listings/listings.seed.ts",
       "source_location": "L1",
       "id": "src_platform_mock_listings_listings_seed_ts",
-      "community": 0,
+      "community": 5,
       "norm_label": "listings.seed.ts"
     },
     {
@@ -720,7 +774,7 @@
       "source_file": "src/platform-mock/listings/listings.seed.ts",
       "source_location": "L9",
       "id": "listings_listings_seed_slot",
-      "community": 0,
+      "community": 5,
       "norm_label": "slot()"
     },
     {
@@ -729,7 +783,7 @@
       "source_file": "src/platform-mock/listings/listings.seed.ts",
       "source_location": "L10",
       "id": "listings_listings_seed_everyday",
-      "community": 0,
+      "community": 5,
       "norm_label": "everyday()"
     },
     {
@@ -738,7 +792,7 @@
       "source_file": "src/platform-mock/listings/listings.seed.ts",
       "source_location": "L104",
       "id": "listings_listings_seed_buildseed",
-      "community": 0,
+      "community": 5,
       "norm_label": "buildseed()"
     },
     {
@@ -747,7 +801,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L1",
       "id": "src_platform_mock_listings_listings_store_ts",
-      "community": 0,
+      "community": 5,
       "norm_label": "listings.store.ts"
     },
     {
@@ -756,7 +810,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L15",
       "id": "listings_listings_store_listingsstore",
-      "community": 0,
+      "community": 5,
       "norm_label": "listingsstore"
     },
     {
@@ -765,7 +819,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L20",
       "id": "listings_listings_store_listingsstore_constructor",
-      "community": 0,
+      "community": 5,
       "norm_label": ".constructor()"
     },
     {
@@ -774,7 +828,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L29",
       "id": "listings_listings_store_listingsstore_all",
-      "community": 0,
+      "community": 5,
       "norm_label": ".all()"
     },
     {
@@ -783,7 +837,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L33",
       "id": "listings_listings_store_listingsstore_has",
-      "community": 0,
+      "community": 5,
       "norm_label": ".has()"
     },
     {
@@ -792,7 +846,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L37",
       "id": "listings_listings_store_listingsstore_getstatus",
-      "community": 0,
+      "community": 5,
       "norm_label": ".getstatus()"
     },
     {
@@ -801,7 +855,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L43",
       "id": "listings_listings_store_listingsstore_setstatus",
-      "community": 0,
+      "community": 5,
       "norm_label": ".setstatus()"
     },
     {
@@ -810,7 +864,7 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L48",
       "id": "listings_listings_store_listingsstore_allstatuses",
-      "community": 0,
+      "community": 5,
       "norm_label": ".allstatuses()"
     },
     {
@@ -819,8 +873,449 @@
       "source_file": "src/platform-mock/listings/listings.store.ts",
       "source_location": "L52",
       "id": "listings_listings_store_listingsstore_resetstatuses",
-      "community": 0,
+      "community": 5,
       "norm_label": ".resetstatuses()"
+    },
+    {
+      "label": "check-scheduler.service.ts",
+      "file_type": "code",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L1",
+      "id": "src_worker_check_scheduler_service_ts",
+      "community": 8,
+      "norm_label": "check-scheduler.service.ts"
+    },
+    {
+      "label": "CheckScheduler",
+      "file_type": "code",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L17",
+      "id": "worker_check_scheduler_service_checkscheduler",
+      "community": 8,
+      "norm_label": "checkscheduler"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L24",
+      "id": "worker_check_scheduler_service_checkscheduler_constructor",
+      "community": 8,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".onApplicationBootstrap()",
+      "file_type": "code",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L29",
+      "id": "worker_check_scheduler_service_checkscheduler_onapplicationbootstrap",
+      "community": 8,
+      "norm_label": ".onapplicationbootstrap()"
+    },
+    {
+      "label": ".beforeApplicationShutdown()",
+      "file_type": "code",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L35",
+      "id": "worker_check_scheduler_service_checkscheduler_beforeapplicationshutdown",
+      "community": 8,
+      "norm_label": ".beforeapplicationshutdown()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L40",
+      "id": "worker_check_scheduler_service_checkscheduler_run",
+      "community": 8,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "main.ts",
+      "file_type": "code",
+      "source_file": "src/worker/main.ts",
+      "source_location": "L1",
+      "id": "src_worker_main_ts",
+      "community": 2,
+      "norm_label": "main.ts"
+    },
+    {
+      "label": "bootstrap()",
+      "file_type": "code",
+      "source_file": "src/worker/main.ts",
+      "source_location": "L5",
+      "id": "worker_main_bootstrap",
+      "community": 2,
+      "norm_label": "bootstrap()"
+    },
+    {
+      "label": "worker.module.ts",
+      "file_type": "code",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L1",
+      "id": "src_worker_worker_module_ts",
+      "community": 2,
+      "norm_label": "worker.module.ts"
+    },
+    {
+      "label": "WorkerModule",
+      "file_type": "code",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L47",
+      "id": "worker_worker_module_workermodule",
+      "community": 2,
+      "norm_label": "workermodule"
+    },
+    {
+      "label": "availability-checker.service.spec.ts",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L1",
+      "id": "src_worker_availability_availability_checker_service_spec_ts",
+      "community": 0,
+      "norm_label": "availability-checker.service.spec.ts"
+    },
+    {
+      "label": "listing()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L24",
+      "id": "availability_availability_checker_service_spec_listing",
+      "community": 0,
+      "norm_label": "listing()"
+    },
+    {
+      "label": "ok()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L32",
+      "id": "availability_availability_checker_service_spec_ok",
+      "community": 0,
+      "norm_label": "ok()"
+    },
+    {
+      "label": "fakeDataSource()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L40",
+      "id": "availability_availability_checker_service_spec_fakedatasource",
+      "community": 0,
+      "norm_label": "fakedatasource()"
+    },
+    {
+      "label": "fakePlatform()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L62",
+      "id": "availability_availability_checker_service_spec_fakeplatform",
+      "community": 0,
+      "norm_label": "fakeplatform()"
+    },
+    {
+      "label": "duringHours()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L76",
+      "id": "availability_availability_checker_service_spec_duringhours",
+      "community": 0,
+      "norm_label": "duringhours()"
+    },
+    {
+      "label": "afterHours()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L78",
+      "id": "availability_availability_checker_service_spec_afterhours",
+      "community": 0,
+      "norm_label": "afterhours()"
+    },
+    {
+      "label": "availability-checker.service.ts",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L1",
+      "id": "src_worker_availability_availability_checker_service_ts",
+      "community": 0,
+      "norm_label": "availability-checker.service.ts"
+    },
+    {
+      "label": "AvailabilityChecker",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L33",
+      "id": "availability_availability_checker_service_availabilitychecker",
+      "community": 8,
+      "norm_label": "availabilitychecker"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L36",
+      "id": "availability_availability_checker_service_availabilitychecker_constructor",
+      "community": 8,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".runRound()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L43",
+      "id": "availability_availability_checker_service_availabilitychecker_runround",
+      "community": 8,
+      "norm_label": ".runround()"
+    },
+    {
+      "label": ".loadListings()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L66",
+      "id": "availability_availability_checker_service_availabilitychecker_loadlistings",
+      "community": 8,
+      "norm_label": ".loadlistings()"
+    },
+    {
+      "label": ".checkListing()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L99",
+      "id": "availability_availability_checker_service_availabilitychecker_checklisting",
+      "community": 6,
+      "norm_label": ".checklisting()"
+    },
+    {
+      "label": ".logSummary()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L149",
+      "id": "availability_availability_checker_service_availabilitychecker_logsummary",
+      "community": 8,
+      "norm_label": ".logsummary()"
+    },
+    {
+      "label": "opening-hours.spec.ts",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L1",
+      "id": "src_worker_availability_opening_hours_spec_ts",
+      "community": 6,
+      "norm_label": "opening-hours.spec.ts"
+    },
+    {
+      "label": "slot()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L9",
+      "id": "availability_opening_hours_spec_slot",
+      "community": 6,
+      "norm_label": "slot()"
+    },
+    {
+      "label": "everyDay()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L10",
+      "id": "availability_opening_hours_spec_everyday",
+      "community": 6,
+      "norm_label": "everyday()"
+    },
+    {
+      "label": "at()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L38",
+      "id": "availability_opening_hours_spec_at",
+      "community": 6,
+      "norm_label": "at()"
+    },
+    {
+      "label": "opening-hours.ts",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L1",
+      "id": "src_worker_availability_opening_hours_ts",
+      "community": 6,
+      "norm_label": "opening-hours.ts"
+    },
+    {
+      "label": "formatterFor()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L18",
+      "id": "availability_opening_hours_formatterfor",
+      "community": 6,
+      "norm_label": "formatterfor()"
+    },
+    {
+      "label": "isValidTimezone()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L34",
+      "id": "availability_opening_hours_isvalidtimezone",
+      "community": 6,
+      "norm_label": "isvalidtimezone()"
+    },
+    {
+      "label": "localTimeAt()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L44",
+      "id": "availability_opening_hours_localtimeat",
+      "community": 6,
+      "norm_label": "localtimeat()"
+    },
+    {
+      "label": "toMinutes()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L56",
+      "id": "availability_opening_hours_tominutes",
+      "community": 6,
+      "norm_label": "tominutes()"
+    },
+    {
+      "label": "previousDay()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L61",
+      "id": "availability_opening_hours_previousday",
+      "community": 6,
+      "norm_label": "previousday()"
+    },
+    {
+      "label": "isWithinOpeningHours()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L73",
+      "id": "availability_opening_hours_iswithinopeninghours",
+      "community": 6,
+      "norm_label": "iswithinopeninghours()"
+    },
+    {
+      "label": "detectMismatch()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L101",
+      "id": "availability_opening_hours_detectmismatch",
+      "community": 6,
+      "norm_label": "detectmismatch()"
+    },
+    {
+      "label": "platform.client.spec.ts",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.spec.ts",
+      "source_location": "L1",
+      "id": "src_worker_platform_platform_client_spec_ts",
+      "community": 9,
+      "norm_label": "platform.client.spec.ts"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.spec.ts",
+      "source_location": "L3",
+      "id": "platform_platform_client_spec_json",
+      "community": 9,
+      "norm_label": "json()"
+    },
+    {
+      "label": "clientReturning()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.spec.ts",
+      "source_location": "L9",
+      "id": "platform_platform_client_spec_clientreturning",
+      "community": 9,
+      "norm_label": "clientreturning()"
+    },
+    {
+      "label": "platform.client.ts",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L1",
+      "id": "src_worker_platform_platform_client_ts",
+      "community": 0,
+      "norm_label": "platform.client.ts"
+    },
+    {
+      "label": "PlatformRequestError",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L20",
+      "id": "platform_platform_client_platformrequesterror",
+      "community": 0,
+      "norm_label": "platformrequesterror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L21",
+      "id": "platform_platform_client_platformrequesterror_constructor",
+      "community": 0,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "PlatformClient",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L56",
+      "id": "platform_platform_client_platformclient",
+      "community": 9,
+      "norm_label": "platformclient"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L57",
+      "id": "platform_platform_client_platformclient_constructor",
+      "community": 9,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".fetchListings()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L64",
+      "id": "platform_platform_client_platformclient_fetchlistings",
+      "community": 9,
+      "norm_label": ".fetchlistings()"
+    },
+    {
+      "label": ".fetchStatus()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L89",
+      "id": "platform_platform_client_platformclient_fetchstatus",
+      "community": 9,
+      "norm_label": ".fetchstatus()"
+    },
+    {
+      "label": ".getJson()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L124",
+      "id": "platform_platform_client_platformclient_getjson",
+      "community": 9,
+      "norm_label": ".getjson()"
+    },
+    {
+      "label": "truncate()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L179",
+      "id": "platform_platform_client_truncate",
+      "community": 9,
+      "norm_label": "truncate()"
+    },
+    {
+      "label": "describe()",
+      "file_type": "code",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L183",
+      "id": "platform_platform_client_describe",
+      "community": 9,
+      "norm_label": "describe()"
     },
     {
       "label": "openapi.spec.ts",
@@ -828,7 +1323,7 @@
       "source_file": "test/openapi.spec.ts",
       "source_location": "L1",
       "id": "test_openapi_spec_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "openapi.spec.ts"
     },
     {
@@ -837,7 +1332,7 @@
       "source_file": "test/openapi.spec.ts",
       "source_location": "L21",
       "id": "test_openapi_spec_documentfor",
-      "community": 2,
+      "community": 3,
       "norm_label": "documentfor()"
     },
     {
@@ -846,7 +1341,7 @@
       "source_file": "test/openapi.spec.ts",
       "source_location": "L40",
       "id": "test_openapi_spec_operations",
-      "community": 2,
+      "community": 3,
       "norm_label": "operations()"
     },
     {
@@ -855,7 +1350,7 @@
       "source_file": "test/platform-mock.e2e-spec.ts",
       "source_location": "L1",
       "id": "test_platform_mock_e2e_spec_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "platform-mock.e2e-spec.ts"
     },
     {
@@ -864,7 +1359,7 @@
       "source_file": "test/postman-collection.spec.ts",
       "source_location": "L1",
       "id": "test_postman_collection_spec_ts",
-      "community": 8,
+      "community": 11,
       "norm_label": "postman-collection.spec.ts"
     },
     {
@@ -873,7 +1368,7 @@
       "source_file": "test/postman-collection.spec.ts",
       "source_location": "L33",
       "id": "test_postman_collection_spec_join",
-      "community": 8,
+      "community": 11,
       "norm_label": "join()"
     },
     {
@@ -882,7 +1377,7 @@
       "source_file": "test/postman-collection.spec.ts",
       "source_location": "L40",
       "id": "test_postman_collection_spec_controllersof",
-      "community": 8,
+      "community": 11,
       "norm_label": "controllersof()"
     },
     {
@@ -891,7 +1386,7 @@
       "source_file": "test/postman-collection.spec.ts",
       "source_location": "L55",
       "id": "test_postman_collection_spec_nestroutes",
-      "community": 8,
+      "community": 11,
       "norm_label": "nestroutes()"
     },
     {
@@ -900,7 +1395,7 @@
       "source_file": "test/postman-collection.spec.ts",
       "source_location": "L86",
       "id": "test_postman_collection_spec_postmanroutes",
-      "community": 8,
+      "community": 11,
       "norm_label": "postmanroutes()"
     },
     {
@@ -908,7 +1403,7 @@
       "file_type": "code",
       "source_file": "src/app.controller.spec.ts",
       "source_location": "L1",
-      "community": 5,
+      "community": 7,
       "norm_label": "app.controller.spec.ts",
       "id": "src_app_controller_spec_ts"
     },
@@ -917,7 +1412,7 @@
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L1",
-      "community": 5,
+      "community": 7,
       "norm_label": "app.controller.ts",
       "id": "src_app_controller_ts"
     },
@@ -926,7 +1421,7 @@
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L5",
-      "community": 5,
+      "community": 7,
       "norm_label": "appcontroller",
       "id": "src_app_controller_appcontroller"
     },
@@ -935,7 +1430,7 @@
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L6",
-      "community": 5,
+      "community": 7,
       "norm_label": ".constructor()",
       "id": "src_app_controller_appcontroller_constructor"
     },
@@ -944,7 +1439,7 @@
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L9",
-      "community": 5,
+      "community": 7,
       "norm_label": ".gethello()",
       "id": "src_app_controller_appcontroller_gethello"
     },
@@ -953,7 +1448,7 @@
       "file_type": "code",
       "source_file": "src/app.module.ts",
       "source_location": "L1",
-      "community": 5,
+      "community": 7,
       "norm_label": "app.module.ts",
       "id": "src_app_module_ts"
     },
@@ -962,7 +1457,7 @@
       "file_type": "code",
       "source_file": "src/app.module.ts",
       "source_location": "L10",
-      "community": 5,
+      "community": 7,
       "norm_label": "appmodule",
       "id": "src_app_module_appmodule"
     },
@@ -971,7 +1466,7 @@
       "file_type": "code",
       "source_file": "src/app.service.ts",
       "source_location": "L1",
-      "community": 5,
+      "community": 7,
       "norm_label": "app.service.ts",
       "id": "src_app_service_ts"
     },
@@ -980,7 +1475,7 @@
       "file_type": "code",
       "source_file": "src/app.service.ts",
       "source_location": "L4",
-      "community": 5,
+      "community": 7,
       "norm_label": "appservice",
       "id": "src_app_service_appservice"
     },
@@ -989,7 +1484,7 @@
       "file_type": "code",
       "source_file": "src/app.service.ts",
       "source_location": "L5",
-      "community": 5,
+      "community": 7,
       "norm_label": ".gethello()",
       "id": "src_app_service_appservice_gethello"
     },
@@ -998,7 +1493,7 @@
       "file_type": "code",
       "source_file": "src/main.ts",
       "source_location": "L1",
-      "community": 5,
+      "community": 7,
       "norm_label": "main.ts",
       "id": "src_main_ts"
     },
@@ -1007,7 +1502,7 @@
       "file_type": "code",
       "source_file": "src/main.ts",
       "source_location": "L4",
-      "community": 5,
+      "community": 7,
       "norm_label": "bootstrap()",
       "id": "src_main_bootstrap"
     },
@@ -1016,7 +1511,7 @@
       "file_type": "code",
       "source_file": "test/app.e2e-spec.ts",
       "source_location": "L1",
-      "community": 5,
+      "community": 7,
       "norm_label": "app.e2e-spec.ts",
       "id": "test_app_e2e_spec_ts"
     }
@@ -1029,9 +1524,9 @@
       "source_file": "src/api/api.docs.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_api_api_docs_ts",
-      "target": "src_common_swagger_ts",
-      "confidence_score": 1.0
+      "target": "src_common_swagger_ts"
     },
     {
       "relation": "contains",
@@ -1039,9 +1534,9 @@
       "source_file": "src/api/api.docs.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_api_api_docs_ts",
-      "target": "api_api_docs_apidocs",
-      "confidence_score": 1.0
+      "target": "api_api_docs_apidocs"
     },
     {
       "relation": "imports_from",
@@ -1050,9 +1545,9 @@
       "source_file": "src/api/main.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_api_main_ts",
-      "target": "src_api_api_docs_ts",
-      "confidence_score": 1.0
+      "target": "src_api_api_docs_ts"
     },
     {
       "relation": "imports",
@@ -1061,9 +1556,9 @@
       "source_file": "src/api/main.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_api_main_ts",
-      "target": "api_api_docs_apidocs",
-      "confidence_score": 1.0
+      "target": "api_api_docs_apidocs"
     },
     {
       "relation": "calls",
@@ -1181,9 +1676,9 @@
       "source_file": "src/api/main.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_api_main_ts",
-      "target": "src_common_swagger_ts",
-      "confidence_score": 1.0
+      "target": "src_common_swagger_ts"
     },
     {
       "relation": "imports",
@@ -1192,9 +1687,9 @@
       "source_file": "src/api/main.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_api_main_ts",
-      "target": "common_swagger_setupswagger",
-      "confidence_score": 1.0
+      "target": "common_swagger_setupswagger"
     },
     {
       "relation": "contains",
@@ -1223,9 +1718,9 @@
       "source_file": "src/api/health/health.controller.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_api_health_health_controller_ts",
-      "target": "health_health_controller_healthschema",
-      "confidence_score": 1.0
+      "target": "health_health_controller_healthschema"
     },
     {
       "relation": "contains",
@@ -1290,6 +1785,17 @@
       "target": "src_common_env_ts"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "src_common_env_ts"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -1309,6 +1815,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "common_env_parseenv"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
       "target": "common_env_parseenv"
     },
     {
@@ -1337,6 +1854,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/database/entities/status-check.entity.ts",
       "source_location": "L9",
       "weight": 1.0,
@@ -1351,9 +1879,9 @@
       "source_file": "src/platform-mock/admin/admin.schemas.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_admin_admin_schemas_ts",
-      "target": "src_common_listing_types_ts",
-      "confidence_score": 1.0
+      "target": "src_common_listing_types_ts"
     },
     {
       "relation": "imports_from",
@@ -1373,9 +1901,9 @@
       "source_file": "src/platform-mock/listings/listings.schemas.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_listings_listings_schemas_ts",
-      "target": "src_common_listing_types_ts",
-      "confidence_score": 1.0
+      "target": "src_common_listing_types_ts"
     },
     {
       "relation": "imports_from",
@@ -1397,6 +1925,61 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_platform_mock_listings_listings_store_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
       "target": "src_common_listing_types_ts"
     },
     {
@@ -1427,9 +2010,9 @@
       "source_file": "src/common/swagger.ts",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_common_swagger_ts",
-      "target": "common_swagger_buildopenapidocument",
-      "confidence_score": 1.0
+      "target": "common_swagger_buildopenapidocument"
     },
     {
       "relation": "contains",
@@ -1437,9 +2020,9 @@
       "source_file": "src/common/swagger.ts",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_common_swagger_ts",
-      "target": "common_swagger_setupswagger",
-      "confidence_score": 1.0
+      "target": "common_swagger_setupswagger"
     },
     {
       "relation": "imports_from",
@@ -1448,9 +2031,9 @@
       "source_file": "src/platform-mock/main.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_main_ts",
-      "target": "src_common_swagger_ts",
-      "confidence_score": 1.0
+      "target": "src_common_swagger_ts"
     },
     {
       "relation": "imports_from",
@@ -1459,9 +2042,9 @@
       "source_file": "src/platform-mock/platform-mock.docs.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_platform_mock_docs_ts",
-      "target": "src_common_swagger_ts",
-      "confidence_score": 1.0
+      "target": "src_common_swagger_ts"
     },
     {
       "relation": "imports_from",
@@ -1470,9 +2053,9 @@
       "source_file": "test/openapi.spec.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_openapi_spec_ts",
-      "target": "src_common_swagger_ts",
-      "confidence_score": 1.0
+      "target": "src_common_swagger_ts"
     },
     {
       "relation": "calls",
@@ -1481,9 +2064,9 @@
       "source_file": "src/common/swagger.ts",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "common_swagger_setupswagger",
-      "target": "common_swagger_buildopenapidocument",
-      "confidence_score": 1.0
+      "target": "common_swagger_buildopenapidocument"
     },
     {
       "relation": "imports",
@@ -1492,9 +2075,9 @@
       "source_file": "test/openapi.spec.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_openapi_spec_ts",
-      "target": "common_swagger_buildopenapidocument",
-      "confidence_score": 1.0
+      "target": "common_swagger_buildopenapidocument"
     },
     {
       "relation": "calls",
@@ -1514,9 +2097,9 @@
       "source_file": "src/platform-mock/main.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_main_ts",
-      "target": "common_swagger_setupswagger",
-      "confidence_score": 1.0
+      "target": "common_swagger_setupswagger"
     },
     {
       "relation": "calls",
@@ -1550,6 +2133,28 @@
       "confidence_score": 1.0,
       "source": "src_database_data_source_ts",
       "target": "entities_listing_entity_listing"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "src_database_entities_mismatch_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "entities_mismatch_entity_mismatch"
     },
     {
       "relation": "imports_from",
@@ -1594,6 +2199,28 @@
       "confidence_score": 1.0,
       "source": "src_database_data_source_ts",
       "target": "migrations_1794441600000_initialschema_initialschema1794441600000"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "src_database_migrations_1794528000000_mismatches_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "migrations_1794528000000_mismatches_mismatches1794528000000"
     },
     {
       "relation": "contains",
@@ -1671,6 +2298,28 @@
       "target": "database_database_module_databasemodule"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "src_database_database_module_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "database_database_module_databasemodule"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/database/migrate.ts",
@@ -1694,12 +2343,56 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "src_database_entities_listing_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/database/entities/status-check.entity.ts",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_database_entities_status_check_entity_ts",
       "target": "src_database_entities_listing_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "src_database_entities_listing_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "src_database_entities_listing_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "entities_listing_entity_listing"
     },
     {
       "relation": "imports",
@@ -1713,6 +2406,115 @@
       "target": "entities_listing_entity_listing"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "entities_listing_entity_listing"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "entities_listing_entity_listing"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "src_database_entities_status_check_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "entities_status_check_entity_statuscheck"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "entities_mismatch_entity_mismatch"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "src_database_entities_mismatch_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "src_database_entities_mismatch_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "src_database_entities_mismatch_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "entities_mismatch_entity_mismatch"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "entities_mismatch_entity_mismatch"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/database/entities/status-check.entity.ts",
@@ -1720,6 +2522,61 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_database_entities_status_check_entity_ts",
+      "target": "entities_status_check_entity_statuscheck"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "src_database_entities_status_check_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "src_database_entities_status_check_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "src_database_entities_status_check_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "entities_status_check_entity_statuscheck"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
       "target": "entities_status_check_entity_statuscheck"
     },
     {
@@ -1753,15 +2610,45 @@
       "target": "migrations_1794441600000_initialschema_initialschema1794441600000_down"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrations/1794528000000-Mismatches.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_migrations_1794528000000_mismatches_ts",
+      "target": "migrations_1794528000000_mismatches_mismatches1794528000000"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrations/1794528000000-Mismatches.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "migrations_1794528000000_mismatches_mismatches1794528000000",
+      "target": "migrations_1794528000000_mismatches_mismatches1794528000000_up"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrations/1794528000000-Mismatches.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "migrations_1794528000000_mismatches_mismatches1794528000000",
+      "target": "migrations_1794528000000_mismatches_mismatches1794528000000_down"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/platform-mock/main.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_main_ts",
-      "target": "src_platform_mock_platform_mock_docs_ts",
-      "confidence_score": 1.0
+      "target": "src_platform_mock_platform_mock_docs_ts"
     },
     {
       "relation": "imports",
@@ -1770,9 +2657,9 @@
       "source_file": "src/platform-mock/main.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_main_ts",
-      "target": "platform_mock_platform_mock_docs_platformmockdocs",
-      "confidence_score": 1.0
+      "target": "platform_mock_platform_mock_docs_platformmockdocs"
     },
     {
       "relation": "imports_from",
@@ -1823,9 +2710,9 @@
       "source_file": "src/platform-mock/platform-mock.docs.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_platform_mock_docs_ts",
-      "target": "platform_mock_platform_mock_docs_platformmockdocs",
-      "confidence_score": 1.0
+      "target": "platform_mock_platform_mock_docs_platformmockdocs"
     },
     {
       "relation": "imports_from",
@@ -2018,9 +2905,9 @@
       "source_file": "src/platform-mock/admin/admin.controller.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_admin_admin_controller_ts",
-      "target": "src_platform_mock_admin_admin_schemas_ts",
-      "confidence_score": 1.0
+      "target": "src_platform_mock_admin_admin_schemas_ts"
     },
     {
       "relation": "contains",
@@ -2522,9 +3409,9 @@
       "source_file": "src/platform-mock/listings/listings.controller.ts",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_listings_listings_controller_ts",
-      "target": "src_platform_mock_listings_listings_schemas_ts",
-      "confidence_score": 1.0
+      "target": "src_platform_mock_listings_listings_schemas_ts"
     },
     {
       "relation": "imports_from",
@@ -2605,9 +3492,9 @@
       "source_file": "src/platform-mock/listings/listings.schemas.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_listings_listings_schemas_ts",
-      "target": "listings_listings_schemas_localtime",
-      "confidence_score": 1.0
+      "target": "listings_listings_schemas_localtime"
     },
     {
       "relation": "contains",
@@ -2615,9 +3502,20 @@
       "source_file": "src/platform-mock/listings/listings.schemas.ts",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_platform_mock_listings_listings_schemas_ts",
-      "target": "listings_listings_schemas_dayslots",
-      "confidence_score": 1.0
+      "target": "listings_listings_schemas_dayslots"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "src_platform_mock_listings_listings_schemas_ts"
     },
     {
       "relation": "contains",
@@ -2785,14 +3683,887 @@
       "target": "listings_listings_store_listingsstore_getstatus"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_check_scheduler_service_ts",
+      "target": "src_worker_availability_availability_checker_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_check_scheduler_service_ts",
+      "target": "availability_availability_checker_service_availabilitychecker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_check_scheduler_service_ts",
+      "target": "worker_check_scheduler_service_checkscheduler"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "src_worker_check_scheduler_service_ts"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_check_scheduler_service_checkscheduler",
+      "target": "worker_check_scheduler_service_checkscheduler_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_check_scheduler_service_checkscheduler",
+      "target": "worker_check_scheduler_service_checkscheduler_onapplicationbootstrap"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_check_scheduler_service_checkscheduler",
+      "target": "worker_check_scheduler_service_checkscheduler_beforeapplicationshutdown"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_check_scheduler_service_checkscheduler",
+      "target": "worker_check_scheduler_service_checkscheduler_run"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "worker_check_scheduler_service_checkscheduler"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/check-scheduler.service.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_check_scheduler_service_checkscheduler_onapplicationbootstrap",
+      "target": "worker_check_scheduler_service_checkscheduler_run"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/main.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_main_ts",
+      "target": "src_worker_worker_module_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/main.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_main_ts",
+      "target": "worker_worker_module_workermodule"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_main_ts",
+      "target": "worker_main_bootstrap"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "src_worker_availability_availability_checker_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "availability_availability_checker_service_availabilitychecker"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "src_worker_platform_platform_client_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "platform_platform_client_platformclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/worker.module.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_worker_module_ts",
+      "target": "worker_worker_module_workermodule"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "src_worker_platform_platform_client_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "platform_platform_client_platformrequesterror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "platform_platform_client_platformclient"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "src_worker_availability_availability_checker_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "availability_availability_checker_service_availabilitychecker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "availability_availability_checker_service_spec_listing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "availability_availability_checker_service_spec_ok"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "availability_availability_checker_service_spec_fakedatasource"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "availability_availability_checker_service_spec_fakeplatform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "availability_availability_checker_service_spec_duringhours"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
+      "target": "availability_availability_checker_service_spec_afterhours"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "src_worker_platform_platform_client_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "platform_platform_client_platformclient"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "src_worker_availability_opening_hours_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "availability_opening_hours_detectmismatch"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "availability_opening_hours_iswithinopeninghours"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_ts",
+      "target": "availability_availability_checker_service_availabilitychecker"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker",
+      "target": "availability_availability_checker_service_availabilitychecker_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker",
+      "target": "availability_availability_checker_service_availabilitychecker_runround"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker",
+      "target": "availability_availability_checker_service_availabilitychecker_loadlistings"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker",
+      "target": "availability_availability_checker_service_availabilitychecker_checklisting"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker",
+      "target": "availability_availability_checker_service_availabilitychecker_logsummary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker_runround",
+      "target": "availability_availability_checker_service_availabilitychecker_loadlistings"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker_runround",
+      "target": "availability_availability_checker_service_availabilitychecker_logsummary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker_checklisting",
+      "target": "availability_opening_hours_iswithinopeninghours"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker_checklisting",
+      "target": "availability_opening_hours_detectmismatch"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "src_worker_availability_opening_hours_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "availability_opening_hours_detectmismatch"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "availability_opening_hours_isvalidtimezone"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "availability_opening_hours_iswithinopeninghours"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "availability_opening_hours_localtimeat"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "availability_opening_hours_spec_slot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "availability_opening_hours_spec_everyday"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.spec.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_spec_ts",
+      "target": "availability_opening_hours_spec_at"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "availability_opening_hours_formatterfor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "availability_opening_hours_isvalidtimezone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "availability_opening_hours_localtimeat"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "availability_opening_hours_tominutes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "availability_opening_hours_previousday"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "availability_opening_hours_iswithinopeninghours"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_opening_hours_ts",
+      "target": "availability_opening_hours_detectmismatch"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "src_worker_availability_opening_hours_ts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_opening_hours_isvalidtimezone",
+      "target": "availability_opening_hours_formatterfor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_opening_hours_localtimeat",
+      "target": "availability_opening_hours_formatterfor"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "availability_opening_hours_isvalidtimezone"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_opening_hours_iswithinopeninghours",
+      "target": "availability_opening_hours_localtimeat"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/opening-hours.ts",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_opening_hours_iswithinopeninghours",
+      "target": "availability_opening_hours_previousday"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_spec_ts",
+      "target": "src_worker_platform_platform_client_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_spec_ts",
+      "target": "platform_platform_client_platformclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.spec.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_spec_ts",
+      "target": "platform_platform_client_spec_json"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.spec.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_spec_ts",
+      "target": "platform_platform_client_spec_clientreturning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "platform_platform_client_platformrequesterror"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "platform_platform_client_platformclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L179",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "platform_platform_client_truncate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_platform_platform_client_ts",
+      "target": "platform_platform_client_describe"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformrequesterror",
+      "target": "platform_platform_client_platformrequesterror_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient",
+      "target": "platform_platform_client_platformclient_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient",
+      "target": "platform_platform_client_platformclient_fetchlistings"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient",
+      "target": "platform_platform_client_platformclient_fetchstatus"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient",
+      "target": "platform_platform_client_platformclient_getjson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient_fetchlistings",
+      "target": "platform_platform_client_platformclient_getjson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient_fetchlistings",
+      "target": "platform_platform_client_describe"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient_fetchstatus",
+      "target": "platform_platform_client_platformclient_getjson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient_fetchstatus",
+      "target": "platform_platform_client_truncate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/platform/platform.client.ts",
+      "source_location": "L142",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_platform_client_platformclient_getjson",
+      "target": "platform_platform_client_truncate"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "test/openapi.spec.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_openapi_spec_ts",
-      "target": "test_openapi_spec_documentfor",
-      "confidence_score": 1.0
+      "target": "test_openapi_spec_documentfor"
     },
     {
       "relation": "contains",
@@ -2800,9 +4571,9 @@
       "source_file": "test/openapi.spec.ts",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_openapi_spec_ts",
-      "target": "test_openapi_spec_operations",
-      "confidence_score": 1.0
+      "target": "test_openapi_spec_operations"
     },
     {
       "relation": "contains",
@@ -3092,5 +4863,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "02b48f7f81f3fa3cc86c9c6058b760964169b00c"
+  "built_at_commit": "64e9d99ae3321947554a2c6e56f09897639d552a"
 }

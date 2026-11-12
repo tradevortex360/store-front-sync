@@ -17,9 +17,11 @@
     "test:e2e": "vitest run --config ./vitest.config.e2e.ts",
     "start:api": "nest start --watch --entryFile api/main",
     "start:platform-mock": "nest start --watch --entryFile platform-mock/main",
+    "start:worker": "nest start --watch --entryFile worker/main",
     "migrate": "nest build && node dist/database/migrate.js",
     "prod:api": "node dist/api/main.js",
     "prod:platform-mock": "node dist/platform-mock/main.js",
+    "prod:worker": "node dist/worker/main.js",
     "prod:migrate": "node dist/database/migrate.js",
     "test:postman": "newman run postman/store-front-sync.postman_collection.json"
   },

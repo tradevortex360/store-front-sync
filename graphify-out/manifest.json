@@ -4,8 +4,8 @@
     "hash": "bac9aae0eca29868f2b4701e7ab7c8ef"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\vitest.config.ts": {
-    "mtime": 1794493340.598926,
-    "hash": "f3debe4546f6a6ade2212018db31296b"
+    "mtime": 1794513139.1893058,
+    "hash": "8cfb7d211b15b96d12d64640d4413e27"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\api\\api.docs.ts": {
     "mtime": 1794507724.9880447,
@@ -24,8 +24,8 @@
     "hash": "8f67e55c521b6ced13fa0850217dd160"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\common\\env.ts": {
-    "mtime": 1794507562.0350237,
-    "hash": "cc7e1c16b286e52b3babf25f74719e32"
+    "mtime": 1794511964.986087,
+    "hash": "319b73dd29a60d1a584a19ca347e6f54"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\common\\listing.types.ts": {
     "mtime": 1794493918.7209625,
@@ -36,8 +36,8 @@
     "hash": "a5782629f50e1b95ac1fe3e5e32d25bd"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\data-source.ts": {
-    "mtime": 1794493644.40448,
-    "hash": "7df1368acbce8a82d2fc44bd5f8942a4"
+    "mtime": 1794511863.128515,
+    "hash": "0154aefcb18e2d57291c27b3b23888b1"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\database.module.ts": {
     "mtime": 1794493644.9803317,
@@ -51,6 +51,10 @@
     "mtime": 1794493918.8069487,
     "hash": "c809311fa2645abd0ead583841611ca0"
   },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\entities\\mismatch.entity.ts": {
+    "mtime": 1794511858.5958593,
+    "hash": "02c4dc66c4125fec625db035ba8532ac"
+  },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\entities\\status-check.entity.ts": {
     "mtime": 1794493918.8464358,
     "hash": "42c454b9ee455a525106e0801abe045b"
@@ -58,6 +62,10 @@
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\migrations\\1794441600000-InitialSchema.ts": {
     "mtime": 1794493614.6815653,
     "hash": "d55e4c2d0af197f9a3b8d20b3c2a1a9d"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\migrations\\1794528000000-Mismatches.ts": {
+    "mtime": 1794511859.1359813,
+    "hash": "d3576f02b09f61f27deb77d6d4ca3ce2"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\platform-mock\\main.ts": {
     "mtime": 1794507559.7918391,
@@ -107,6 +115,42 @@
     "mtime": 1794493919.2386768,
     "hash": "221a4e8f3f05be4afeb7884954b18c61"
   },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\check-scheduler.service.ts": {
+    "mtime": 1794512898.459788,
+    "hash": "e6791a48c18a58824f6d49e424b6fd4f"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\main.ts": {
+    "mtime": 1794512020.6737676,
+    "hash": "e1cf0644ae1c9a8e34820767910a1627"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\worker.module.ts": {
+    "mtime": 1794512020.066526,
+    "hash": "16c9b0cb0c28f6de6daf24b6f7eb3913"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\availability\\availability-checker.service.spec.ts": {
+    "mtime": 1794512898.0694504,
+    "hash": "4c0bfd09b52fb8b5d3b81f1d277f1f0e"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\availability\\availability-checker.service.ts": {
+    "mtime": 1794512003.4935472,
+    "hash": "73287e2a08283363916405a8f837da1f"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\availability\\opening-hours.spec.ts": {
+    "mtime": 1794512898.3624408,
+    "hash": "22bb5dfabe45836fc35f9b77fb477a88"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\availability\\opening-hours.ts": {
+    "mtime": 1794511894.4405208,
+    "hash": "9249bd02eef293dd1c0274903df0e9e9"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\platform\\platform.client.spec.ts": {
+    "mtime": 1794512898.6103604,
+    "hash": "45be0701afcd6da42d7b8e84910b835c"
+  },
+  "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\platform\\platform.client.ts": {
+    "mtime": 1794512898.766512,
+    "hash": "932e36434c5a41406de103bdf3b52f60"
+  },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\test\\openapi.spec.ts": {
     "mtime": 1794507792.9375043,
     "hash": "16640c3ffbe67b42609055311e8d89cc"
@@ -124,15 +168,15 @@
     "hash": "e28a742a1ed2ad8272c0d7d89d43974f"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\CLAUDE.md": {
-    "mtime": 1794508289.157367,
-    "hash": "5b24b4b0bc8e79f749158d0c6e8596bf"
+    "mtime": 1794512873.0986333,
+    "hash": "b3f226776e6e1094a89ffa8e2bb45930"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\docker-compose.yml": {
-    "mtime": 1794507717.8493483,
-    "hash": "ddb4ca1162e4ea1af549a7ec91773052"
+    "mtime": 1794512121.5740805,
+    "hash": "dc91e3bbd46399a4d43125f89ac7ea00"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\README.md": {
-    "mtime": 1794508275.8236036,
-    "hash": "5b18ed0d6a1d70dd8d0fe853a72875ef"
+    "mtime": 1794512873.0541399,
+    "hash": "3ca9e0922a38a23b9560a92c49a55c6a"
   }
 }

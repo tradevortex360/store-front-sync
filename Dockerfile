@@ -1,4 +1,4 @@
-# One image for every service (api, platform-mock, migrate, later worker).
+# One image for every service (api, platform-mock, migrate, worker).
 # docker compose picks the entry point per service via `command`.
 
 FROM node:24-alpine AS base
