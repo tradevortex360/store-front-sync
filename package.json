@@ -8,25 +8,34 @@
   "type": "module",
   "scripts": {
     "build": "nest build",
-    "deploy": "nest deploy",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
     "lint": "oxlint --type-aware src/ test/",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
     "test:debug": "vitest --inspect-brk --no-file-parallelism",
-    "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
+    "test:e2e": "vitest run --config ./vitest.config.e2e.ts",
+    "start:api": "nest start --watch --entryFile api/main",
+    "start:platform-mock": "nest start --watch --entryFile platform-mock/main",
+    "migrate": "nest build && node dist/database/migrate.js",
+    "prod:api": "node dist/api/main.js",
+    "prod:platform-mock": "node dist/platform-mock/main.js",
+    "prod:migrate": "node dist/database/migrate.js",
+    "test:postman": "newman run postman/store-front-sync.postman_collection.json"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",
+    "@nestjs/config": "^12.1.1",
     "@nestjs/core": "^12.0.1",
     "@nestjs/platform-express": "^12.0.1",
+    "@nestjs/swagger": "^12.1.1",
+    "@nestjs/terminus": "^12.1.0",
+    "@nestjs/typeorm": "^12.0.3",
+    "pg": "^8.23.1",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "typeorm": "^1.1.3",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@nestjs/cli": "^12.0.0",
@@ -35,8 +44,10 @@
     "@nestjs/testing": "^12.0.1",
     "@types/express": "^5.0.0",
     "@types/node": "^24.0.0",
+    "@types/pg": "^8.23.1",
     "@types/supertest": "^7.0.0",
     "@vitest/coverage-v8": "^4.1.2",
+    "newman": "^6.2.3",
     "oxlint": "^1.58.0",
     "oxlint-tsgolint": "^7.0.2001",
     "prettier": "^3.4.2",
@@ -45,5 +56,6 @@
     "typescript": "^6.0.2",
     "vite": "^8.0.0",
     "vitest": "^4.1.2"
-  }
+  },
+  "packageManager": "pnpm@10.33.2"
 }

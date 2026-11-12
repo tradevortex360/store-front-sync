@@ -9,7 +9,7 @@
       "source_file": "vitest.config.e2e.ts",
       "source_location": "L1",
       "id": "vitest_config_e2e_ts",
-      "community": 3,
+      "community": 9,
       "norm_label": "vitest.config.e2e.ts"
     },
     {
@@ -18,128 +18,2854 @@
       "source_file": "vitest.config.ts",
       "source_location": "L1",
       "id": "vitest_config_ts",
-      "community": 4,
+      "community": 10,
       "norm_label": "vitest.config.ts"
+    },
+    {
+      "label": "api.docs.ts",
+      "file_type": "code",
+      "source_file": "src/api/api.docs.ts",
+      "source_location": "L1",
+      "id": "src_api_api_docs_ts",
+      "community": 2,
+      "norm_label": "api.docs.ts"
+    },
+    {
+      "label": "apiDocs()",
+      "file_type": "code",
+      "source_file": "src/api/api.docs.ts",
+      "source_location": "L3",
+      "id": "api_api_docs_apidocs",
+      "community": 2,
+      "norm_label": "apidocs()"
+    },
+    {
+      "label": "api.module.ts",
+      "file_type": "code",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L1",
+      "id": "src_api_api_module_ts",
+      "community": 1,
+      "norm_label": "api.module.ts"
+    },
+    {
+      "label": "ApiModule",
+      "file_type": "code",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L20",
+      "id": "api_api_module_apimodule",
+      "community": 1,
+      "norm_label": "apimodule"
+    },
+    {
+      "label": "main.ts",
+      "file_type": "code",
+      "source_file": "src/api/main.ts",
+      "source_location": "L1",
+      "id": "src_api_main_ts",
+      "community": 2,
+      "norm_label": "main.ts"
+    },
+    {
+      "label": "bootstrap()",
+      "file_type": "code",
+      "source_file": "src/api/main.ts",
+      "source_location": "L9",
+      "id": "api_main_bootstrap",
+      "community": 2,
+      "norm_label": "bootstrap()"
+    },
+    {
+      "label": "health.controller.ts",
+      "file_type": "code",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L1",
+      "id": "src_api_health_health_controller_ts",
+      "community": 1,
+      "norm_label": "health.controller.ts"
+    },
+    {
+      "label": "healthSchema()",
+      "file_type": "code",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L16",
+      "id": "health_health_controller_healthschema",
+      "community": 1,
+      "norm_label": "healthschema()"
+    },
+    {
+      "label": "HealthController",
+      "file_type": "code",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L45",
+      "id": "health_health_controller_healthcontroller",
+      "community": 1,
+      "norm_label": "healthcontroller"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L46",
+      "id": "health_health_controller_healthcontroller_constructor",
+      "community": 1,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".check()",
+      "file_type": "code",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L69",
+      "id": "health_health_controller_healthcontroller_check",
+      "community": 1,
+      "norm_label": ".check()"
+    },
+    {
+      "label": "env.ts",
+      "file_type": "code",
+      "source_file": "src/common/env.ts",
+      "source_location": "L1",
+      "id": "src_common_env_ts",
+      "community": 1,
+      "norm_label": "env.ts"
+    },
+    {
+      "label": "parseEnv()",
+      "file_type": "code",
+      "source_file": "src/common/env.ts",
+      "source_location": "L32",
+      "id": "common_env_parseenv",
+      "community": 1,
+      "norm_label": "parseenv()"
+    },
+    {
+      "label": "listing.types.ts",
+      "file_type": "code",
+      "source_file": "src/common/listing.types.ts",
+      "source_location": "L1",
+      "id": "src_common_listing_types_ts",
+      "community": 0,
+      "norm_label": "listing.types.ts"
+    },
+    {
+      "label": "swagger.ts",
+      "file_type": "code",
+      "source_file": "src/common/swagger.ts",
+      "source_location": "L1",
+      "id": "src_common_swagger_ts",
+      "community": 2,
+      "norm_label": "swagger.ts"
+    },
+    {
+      "label": "buildOpenApiDocument()",
+      "file_type": "code",
+      "source_file": "src/common/swagger.ts",
+      "source_location": "L24",
+      "id": "common_swagger_buildopenapidocument",
+      "community": 2,
+      "norm_label": "buildopenapidocument()"
+    },
+    {
+      "label": "setupSwagger()",
+      "file_type": "code",
+      "source_file": "src/common/swagger.ts",
+      "source_location": "L42",
+      "id": "common_swagger_setupswagger",
+      "community": 2,
+      "norm_label": "setupswagger()"
+    },
+    {
+      "label": "data-source.ts",
+      "file_type": "code",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L1",
+      "id": "src_database_data_source_ts",
+      "community": 6,
+      "norm_label": "data-source.ts"
+    },
+    {
+      "label": "buildDataSourceOptions()",
+      "file_type": "code",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L12",
+      "id": "database_data_source_builddatasourceoptions",
+      "community": 1,
+      "norm_label": "builddatasourceoptions()"
+    },
+    {
+      "label": "database.module.ts",
+      "file_type": "code",
+      "source_file": "src/database/database.module.ts",
+      "source_location": "L1",
+      "id": "src_database_database_module_ts",
+      "community": 1,
+      "norm_label": "database.module.ts"
+    },
+    {
+      "label": "DatabaseModule",
+      "file_type": "code",
+      "source_file": "src/database/database.module.ts",
+      "source_location": "L19",
+      "id": "database_database_module_databasemodule",
+      "community": 1,
+      "norm_label": "databasemodule"
+    },
+    {
+      "label": "migrate.ts",
+      "file_type": "code",
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L1",
+      "id": "src_database_migrate_ts",
+      "community": 1,
+      "norm_label": "migrate.ts"
+    },
+    {
+      "label": "migrate()",
+      "file_type": "code",
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L10",
+      "id": "database_migrate_migrate",
+      "community": 1,
+      "norm_label": "migrate()"
+    },
+    {
+      "label": "listing.entity.ts",
+      "file_type": "code",
+      "source_file": "src/database/entities/listing.entity.ts",
+      "source_location": "L1",
+      "id": "src_database_entities_listing_entity_ts",
+      "community": 6,
+      "norm_label": "listing.entity.ts"
+    },
+    {
+      "label": "Listing",
+      "file_type": "code",
+      "source_file": "src/database/entities/listing.entity.ts",
+      "source_location": "L12",
+      "id": "entities_listing_entity_listing",
+      "community": 6,
+      "norm_label": "listing"
+    },
+    {
+      "label": "status-check.entity.ts",
+      "file_type": "code",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L1",
+      "id": "src_database_entities_status_check_entity_ts",
+      "community": 6,
+      "norm_label": "status-check.entity.ts"
+    },
+    {
+      "label": "StatusCheck",
+      "file_type": "code",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L28",
+      "id": "entities_status_check_entity_statuscheck",
+      "community": 6,
+      "norm_label": "statuscheck"
+    },
+    {
+      "label": "1794441600000-InitialSchema.ts",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
+      "source_location": "L1",
+      "id": "src_database_migrations_1794441600000_initialschema_ts",
+      "community": 6,
+      "norm_label": "1794441600000-initialschema.ts"
+    },
+    {
+      "label": "InitialSchema1794441600000",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
+      "source_location": "L3",
+      "id": "migrations_1794441600000_initialschema_initialschema1794441600000",
+      "community": 6,
+      "norm_label": "initialschema1794441600000"
+    },
+    {
+      "label": ".up()",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
+      "source_location": "L6",
+      "id": "migrations_1794441600000_initialschema_initialschema1794441600000_up",
+      "community": 6,
+      "norm_label": ".up()"
+    },
+    {
+      "label": ".down()",
+      "file_type": "code",
+      "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
+      "source_location": "L40",
+      "id": "migrations_1794441600000_initialschema_initialschema1794441600000_down",
+      "community": 6,
+      "norm_label": ".down()"
+    },
+    {
+      "label": "main.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_main_ts",
+      "community": 2,
+      "norm_label": "main.ts"
+    },
+    {
+      "label": "bootstrap()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L9",
+      "id": "platform_mock_main_bootstrap",
+      "community": 2,
+      "norm_label": "bootstrap()"
+    },
+    {
+      "label": "platform-mock.docs.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/platform-mock.docs.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_platform_mock_docs_ts",
+      "community": 2,
+      "norm_label": "platform-mock.docs.ts"
+    },
+    {
+      "label": "platformMockDocs()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/platform-mock.docs.ts",
+      "source_location": "L3",
+      "id": "platform_mock_platform_mock_docs_platformmockdocs",
+      "community": 2,
+      "norm_label": "platformmockdocs()"
+    },
+    {
+      "label": "platform-mock.module.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_platform_mock_module_ts",
+      "community": 0,
+      "norm_label": "platform-mock.module.ts"
+    },
+    {
+      "label": "MockHealthController",
+      "file_type": "code",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L12",
+      "id": "platform_mock_platform_mock_module_mockhealthcontroller",
+      "community": 0,
+      "norm_label": "mockhealthcontroller"
+    },
+    {
+      "label": ".health()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L24",
+      "id": "platform_mock_platform_mock_module_mockhealthcontroller_health",
+      "community": 0,
+      "norm_label": ".health()"
+    },
+    {
+      "label": "PlatformMockModule",
+      "file_type": "code",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L40",
+      "id": "platform_mock_platform_mock_module_platformmockmodule",
+      "community": 0,
+      "norm_label": "platformmockmodule"
+    },
+    {
+      "label": "admin.controller.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_admin_admin_controller_ts",
+      "community": 0,
+      "norm_label": "admin.controller.ts"
+    },
+    {
+      "label": "AdminController",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L53",
+      "id": "admin_admin_controller_admincontroller",
+      "community": 7,
+      "norm_label": "admincontroller"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L54",
+      "id": "admin_admin_controller_admincontroller_constructor",
+      "community": 7,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".state()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L66",
+      "id": "admin_admin_controller_admincontroller_state",
+      "community": 7,
+      "norm_label": ".state()"
+    },
+    {
+      "label": ".updateDefaults()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L84",
+      "id": "admin_admin_controller_admincontroller_updatedefaults",
+      "community": 7,
+      "norm_label": ".updatedefaults()"
+    },
+    {
+      "label": ".updateListing()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L104",
+      "id": "admin_admin_controller_admincontroller_updatelisting",
+      "community": 7,
+      "norm_label": ".updatelisting()"
+    },
+    {
+      "label": ".clearListing()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L124",
+      "id": "admin_admin_controller_admincontroller_clearlisting",
+      "community": 7,
+      "norm_label": ".clearlisting()"
+    },
+    {
+      "label": ".setStatus()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L146",
+      "id": "admin_admin_controller_admincontroller_setstatus",
+      "community": 7,
+      "norm_label": ".setstatus()"
+    },
+    {
+      "label": ".reset()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L165",
+      "id": "admin_admin_controller_admincontroller_reset",
+      "community": 7,
+      "norm_label": ".reset()"
+    },
+    {
+      "label": ".assertListing()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L170",
+      "id": "admin_admin_controller_admincontroller_assertlisting",
+      "community": 7,
+      "norm_label": ".assertlisting()"
+    },
+    {
+      "label": "admin.schemas.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/admin/admin.schemas.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_admin_admin_schemas_ts",
+      "community": 0,
+      "norm_label": "admin.schemas.ts"
+    },
+    {
+      "label": "chaos.service.spec.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.spec.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_chaos_chaos_service_spec_ts",
+      "community": 4,
+      "norm_label": "chaos.service.spec.ts"
+    },
+    {
+      "label": "config()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.spec.ts",
+      "source_location": "L4",
+      "id": "chaos_chaos_service_spec_config",
+      "community": 4,
+      "norm_label": "config()"
+    },
+    {
+      "label": "chaos.service.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_chaos_chaos_service_ts",
+      "community": 4,
+      "norm_label": "chaos.service.ts"
+    },
+    {
+      "label": "ChaosService",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L32",
+      "id": "chaos_chaos_service_chaosservice",
+      "community": 4,
+      "norm_label": "chaosservice"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L38",
+      "id": "chaos_chaos_service_chaosservice_constructor",
+      "community": 4,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".getState()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L48",
+      "id": "chaos_chaos_service_chaosservice_getstate",
+      "community": 4,
+      "norm_label": ".getstate()"
+    },
+    {
+      "label": ".updateDefaults()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L52",
+      "id": "chaos_chaos_service_chaosservice_updatedefaults",
+      "community": 4,
+      "norm_label": ".updatedefaults()"
+    },
+    {
+      "label": ".updateListing()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L57",
+      "id": "chaos_chaos_service_chaosservice_updatelisting",
+      "community": 4,
+      "norm_label": ".updatelisting()"
+    },
+    {
+      "label": ".clearListing()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L65",
+      "id": "chaos_chaos_service_chaosservice_clearlisting",
+      "community": 4,
+      "norm_label": ".clearlisting()"
+    },
+    {
+      "label": ".reset()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L71",
+      "id": "chaos_chaos_service_chaosservice_reset",
+      "community": 4,
+      "norm_label": ".reset()"
+    },
+    {
+      "label": ".ruleFor()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L76",
+      "id": "chaos_chaos_service_chaosservice_rulefor",
+      "community": 4,
+      "norm_label": ".rulefor()"
+    },
+    {
+      "label": ".decide()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L81",
+      "id": "chaos_chaos_service_chaosservice_decide",
+      "community": 4,
+      "norm_label": ".decide()"
+    },
+    {
+      "label": ".initialState()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L90",
+      "id": "chaos_chaos_service_chaosservice_initialstate",
+      "community": 4,
+      "norm_label": ".initialstate()"
+    },
+    {
+      "label": "malformed-payloads.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_chaos_malformed_payloads_ts",
+      "community": 3,
+      "norm_label": "malformed-payloads.ts"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L9",
+      "id": "chaos_malformed_payloads_json",
+      "community": 3,
+      "norm_label": "json()"
+    },
+    {
+      "label": "malformedStatusBodies()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L11",
+      "id": "chaos_malformed_payloads_malformedstatusbodies",
+      "community": 3,
+      "norm_label": "malformedstatusbodies()"
+    },
+    {
+      "label": "malformedListingsBodies()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L24",
+      "id": "chaos_malformed_payloads_malformedlistingsbodies",
+      "community": 3,
+      "norm_label": "malformedlistingsbodies()"
+    },
+    {
+      "label": "pick()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L46",
+      "id": "chaos_malformed_payloads_pick",
+      "community": 3,
+      "norm_label": "pick()"
+    },
+    {
+      "label": "listings.controller.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_listings_listings_controller_ts",
+      "community": 3,
+      "norm_label": "listings.controller.ts"
+    },
+    {
+      "label": "ListingsController",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L40",
+      "id": "listings_listings_controller_listingscontroller",
+      "community": 3,
+      "norm_label": "listingscontroller"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L41",
+      "id": "listings_listings_controller_listingscontroller_constructor",
+      "community": 3,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".list()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L59",
+      "id": "listings_listings_controller_listingscontroller_list",
+      "community": 3,
+      "norm_label": ".list()"
+    },
+    {
+      "label": ".status()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L99",
+      "id": "listings_listings_controller_listingscontroller_status",
+      "community": 3,
+      "norm_label": ".status()"
+    },
+    {
+      "label": "listings.schemas.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.schemas.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_listings_listings_schemas_ts",
+      "community": 3,
+      "norm_label": "listings.schemas.ts"
+    },
+    {
+      "label": "localTime()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.schemas.ts",
+      "source_location": "L9",
+      "id": "listings_listings_schemas_localtime",
+      "community": 3,
+      "norm_label": "localtime()"
+    },
+    {
+      "label": "daySlots()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.schemas.ts",
+      "source_location": "L26",
+      "id": "listings_listings_schemas_dayslots",
+      "community": 3,
+      "norm_label": "dayslots()"
+    },
+    {
+      "label": "listings.seed.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_listings_listings_seed_ts",
+      "community": 0,
+      "norm_label": "listings.seed.ts"
+    },
+    {
+      "label": "slot()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L9",
+      "id": "listings_listings_seed_slot",
+      "community": 0,
+      "norm_label": "slot()"
+    },
+    {
+      "label": "everyDay()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L10",
+      "id": "listings_listings_seed_everyday",
+      "community": 0,
+      "norm_label": "everyday()"
+    },
+    {
+      "label": "buildSeed()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L104",
+      "id": "listings_listings_seed_buildseed",
+      "community": 0,
+      "norm_label": "buildseed()"
+    },
+    {
+      "label": "listings.store.ts",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L1",
+      "id": "src_platform_mock_listings_listings_store_ts",
+      "community": 0,
+      "norm_label": "listings.store.ts"
+    },
+    {
+      "label": "ListingsStore",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L15",
+      "id": "listings_listings_store_listingsstore",
+      "community": 0,
+      "norm_label": "listingsstore"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L20",
+      "id": "listings_listings_store_listingsstore_constructor",
+      "community": 0,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".all()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L29",
+      "id": "listings_listings_store_listingsstore_all",
+      "community": 0,
+      "norm_label": ".all()"
+    },
+    {
+      "label": ".has()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L33",
+      "id": "listings_listings_store_listingsstore_has",
+      "community": 0,
+      "norm_label": ".has()"
+    },
+    {
+      "label": ".getStatus()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L37",
+      "id": "listings_listings_store_listingsstore_getstatus",
+      "community": 0,
+      "norm_label": ".getstatus()"
+    },
+    {
+      "label": ".setStatus()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L43",
+      "id": "listings_listings_store_listingsstore_setstatus",
+      "community": 0,
+      "norm_label": ".setstatus()"
+    },
+    {
+      "label": ".allStatuses()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L48",
+      "id": "listings_listings_store_listingsstore_allstatuses",
+      "community": 0,
+      "norm_label": ".allstatuses()"
+    },
+    {
+      "label": ".resetStatuses()",
+      "file_type": "code",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L52",
+      "id": "listings_listings_store_listingsstore_resetstatuses",
+      "community": 0,
+      "norm_label": ".resetstatuses()"
+    },
+    {
+      "label": "openapi.spec.ts",
+      "file_type": "code",
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L1",
+      "id": "test_openapi_spec_ts",
+      "community": 2,
+      "norm_label": "openapi.spec.ts"
+    },
+    {
+      "label": "documentFor()",
+      "file_type": "code",
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L21",
+      "id": "test_openapi_spec_documentfor",
+      "community": 2,
+      "norm_label": "documentfor()"
+    },
+    {
+      "label": "operations()",
+      "file_type": "code",
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L40",
+      "id": "test_openapi_spec_operations",
+      "community": 2,
+      "norm_label": "operations()"
+    },
+    {
+      "label": "platform-mock.e2e-spec.ts",
+      "file_type": "code",
+      "source_file": "test/platform-mock.e2e-spec.ts",
+      "source_location": "L1",
+      "id": "test_platform_mock_e2e_spec_ts",
+      "community": 0,
+      "norm_label": "platform-mock.e2e-spec.ts"
+    },
+    {
+      "label": "postman-collection.spec.ts",
+      "file_type": "code",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L1",
+      "id": "test_postman_collection_spec_ts",
+      "community": 8,
+      "norm_label": "postman-collection.spec.ts"
+    },
+    {
+      "label": "join()",
+      "file_type": "code",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L33",
+      "id": "test_postman_collection_spec_join",
+      "community": 8,
+      "norm_label": "join()"
+    },
+    {
+      "label": "controllersOf()",
+      "file_type": "code",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L40",
+      "id": "test_postman_collection_spec_controllersof",
+      "community": 8,
+      "norm_label": "controllersof()"
+    },
+    {
+      "label": "nestRoutes()",
+      "file_type": "code",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L55",
+      "id": "test_postman_collection_spec_nestroutes",
+      "community": 8,
+      "norm_label": "nestroutes()"
+    },
+    {
+      "label": "postmanRoutes()",
+      "file_type": "code",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L86",
+      "id": "test_postman_collection_spec_postmanroutes",
+      "community": 8,
+      "norm_label": "postmanroutes()"
     },
     {
       "label": "app.controller.spec.ts",
       "file_type": "code",
       "source_file": "src/app.controller.spec.ts",
       "source_location": "L1",
-      "id": "src_app_controller_spec_ts",
-      "community": 0,
-      "norm_label": "app.controller.spec.ts"
+      "community": 5,
+      "norm_label": "app.controller.spec.ts",
+      "id": "src_app_controller_spec_ts"
     },
     {
       "label": "app.controller.ts",
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L1",
-      "id": "src_app_controller_ts",
-      "community": 0,
-      "norm_label": "app.controller.ts"
+      "community": 5,
+      "norm_label": "app.controller.ts",
+      "id": "src_app_controller_ts"
     },
     {
       "label": "AppController",
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L5",
-      "id": "src_app_controller_appcontroller",
-      "community": 2,
-      "norm_label": "appcontroller"
+      "community": 5,
+      "norm_label": "appcontroller",
+      "id": "src_app_controller_appcontroller"
     },
     {
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L6",
-      "id": "src_app_controller_appcontroller_constructor",
-      "community": 2,
-      "norm_label": ".constructor()"
+      "community": 5,
+      "norm_label": ".constructor()",
+      "id": "src_app_controller_appcontroller_constructor"
     },
     {
       "label": ".getHello()",
       "file_type": "code",
       "source_file": "src/app.controller.ts",
       "source_location": "L9",
-      "id": "src_app_controller_appcontroller_gethello",
-      "community": 2,
-      "norm_label": ".gethello()"
+      "community": 5,
+      "norm_label": ".gethello()",
+      "id": "src_app_controller_appcontroller_gethello"
     },
     {
       "label": "app.module.ts",
       "file_type": "code",
       "source_file": "src/app.module.ts",
       "source_location": "L1",
-      "id": "src_app_module_ts",
-      "community": 1,
-      "norm_label": "app.module.ts"
+      "community": 5,
+      "norm_label": "app.module.ts",
+      "id": "src_app_module_ts"
     },
     {
       "label": "AppModule",
       "file_type": "code",
       "source_file": "src/app.module.ts",
       "source_location": "L10",
-      "id": "src_app_module_appmodule",
-      "community": 1,
-      "norm_label": "appmodule"
+      "community": 5,
+      "norm_label": "appmodule",
+      "id": "src_app_module_appmodule"
     },
     {
       "label": "app.service.ts",
       "file_type": "code",
       "source_file": "src/app.service.ts",
       "source_location": "L1",
-      "id": "src_app_service_ts",
-      "community": 0,
-      "norm_label": "app.service.ts"
+      "community": 5,
+      "norm_label": "app.service.ts",
+      "id": "src_app_service_ts"
     },
     {
       "label": "AppService",
       "file_type": "code",
       "source_file": "src/app.service.ts",
       "source_location": "L4",
-      "id": "src_app_service_appservice",
-      "community": 0,
-      "norm_label": "appservice"
+      "community": 5,
+      "norm_label": "appservice",
+      "id": "src_app_service_appservice"
     },
     {
       "label": ".getHello()",
       "file_type": "code",
       "source_file": "src/app.service.ts",
       "source_location": "L5",
-      "id": "src_app_service_appservice_gethello",
-      "community": 0,
-      "norm_label": ".gethello()"
+      "community": 5,
+      "norm_label": ".gethello()",
+      "id": "src_app_service_appservice_gethello"
     },
     {
       "label": "main.ts",
       "file_type": "code",
       "source_file": "src/main.ts",
       "source_location": "L1",
-      "id": "src_main_ts",
-      "community": 1,
-      "norm_label": "main.ts"
+      "community": 5,
+      "norm_label": "main.ts",
+      "id": "src_main_ts"
     },
     {
       "label": "bootstrap()",
       "file_type": "code",
       "source_file": "src/main.ts",
       "source_location": "L4",
-      "id": "src_main_bootstrap",
-      "community": 1,
-      "norm_label": "bootstrap()"
+      "community": 5,
+      "norm_label": "bootstrap()",
+      "id": "src_main_bootstrap"
     },
     {
       "label": "app.e2e-spec.ts",
       "file_type": "code",
       "source_file": "test/app.e2e-spec.ts",
       "source_location": "L1",
-      "id": "test_app_e2e_spec_ts",
-      "community": 1,
-      "norm_label": "app.e2e-spec.ts"
+      "community": 5,
+      "norm_label": "app.e2e-spec.ts",
+      "id": "test_app_e2e_spec_ts"
     }
   ],
   "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.docs.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_api_api_docs_ts",
+      "target": "src_common_swagger_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.docs.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_api_api_docs_ts",
+      "target": "api_api_docs_apidocs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/main.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_api_main_ts",
+      "target": "src_api_api_docs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/main.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_api_main_ts",
+      "target": "api_api_docs_apidocs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/api/main.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "api_main_bootstrap",
+      "target": "api_api_docs_apidocs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_api_module_ts",
+      "target": "src_common_env_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_api_module_ts",
+      "target": "common_env_parseenv"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_api_module_ts",
+      "target": "src_database_database_module_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_api_module_ts",
+      "target": "database_database_module_databasemodule"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_api_module_ts",
+      "target": "src_api_health_health_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_api_module_ts",
+      "target": "health_health_controller_healthcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/api.module.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_api_module_ts",
+      "target": "api_api_module_apimodule"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_main_ts",
+      "target": "src_api_api_module_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_main_ts",
+      "target": "api_api_module_apimodule"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_api_main_ts",
+      "target": "src_common_swagger_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_api_main_ts",
+      "target": "common_swagger_setupswagger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/main.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_main_ts",
+      "target": "api_main_bootstrap"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/api/main.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "api_main_bootstrap",
+      "target": "common_swagger_setupswagger"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_api_health_health_controller_ts",
+      "target": "health_health_controller_healthschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_api_health_health_controller_ts",
+      "target": "health_health_controller_healthcontroller"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "health_health_controller_healthcontroller",
+      "target": "health_health_controller_healthcontroller_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/api/health/health.controller.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "health_health_controller_healthcontroller",
+      "target": "health_health_controller_healthcontroller_check"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/common/env.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_common_env_ts",
+      "target": "common_env_parseenv"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_migrate_ts",
+      "target": "src_common_env_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "src_common_env_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_migrate_ts",
+      "target": "common_env_parseenv"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "common_env_parseenv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "database_migrate_migrate",
+      "target": "common_env_parseenv"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/listing.entity.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_listing_entity_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_status_check_entity_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.schemas.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_platform_mock_admin_admin_schemas_ts",
+      "target": "src_common_listing_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_malformed_payloads_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.schemas.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_platform_mock_listings_listings_schemas_ts",
+      "target": "src_common_listing_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_seed_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_store_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/platform-mock.e2e-spec.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_platform_mock_e2e_spec_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_admin_admin_controller_ts",
+      "target": "src_common_listing_types_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/common/swagger.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_common_swagger_ts",
+      "target": "common_swagger_buildopenapidocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/common/swagger.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "src_common_swagger_ts",
+      "target": "common_swagger_setupswagger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_platform_mock_main_ts",
+      "target": "src_common_swagger_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.docs.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_platform_mock_platform_mock_docs_ts",
+      "target": "src_common_swagger_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "test_openapi_spec_ts",
+      "target": "src_common_swagger_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/common/swagger.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "common_swagger_setupswagger",
+      "target": "common_swagger_buildopenapidocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "test_openapi_spec_ts",
+      "target": "common_swagger_buildopenapidocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "test_openapi_spec_documentfor",
+      "target": "common_swagger_buildopenapidocument"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_platform_mock_main_ts",
+      "target": "common_swagger_setupswagger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "platform_mock_main_bootstrap",
+      "target": "common_swagger_setupswagger"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "src_database_entities_listing_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "entities_listing_entity_listing"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "src_database_entities_status_check_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "entities_status_check_entity_statuscheck"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "src_database_migrations_1794441600000_initialschema_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "migrations_1794441600000_initialschema_initialschema1794441600000"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/data-source.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_data_source_ts",
+      "target": "database_data_source_builddatasourceoptions"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/database.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_database_module_ts",
+      "target": "src_database_data_source_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_migrate_ts",
+      "target": "src_database_data_source_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/database.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_database_module_ts",
+      "target": "database_data_source_builddatasourceoptions"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_migrate_ts",
+      "target": "database_data_source_builddatasourceoptions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "database_migrate_migrate",
+      "target": "database_data_source_builddatasourceoptions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/database.module.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_database_module_ts",
+      "target": "database_database_module_databasemodule"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrate.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_migrate_ts",
+      "target": "database_migrate_migrate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/listing.entity.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_listing_entity_ts",
+      "target": "entities_listing_entity_listing"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_status_check_entity_ts",
+      "target": "src_database_entities_listing_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_status_check_entity_ts",
+      "target": "entities_listing_entity_listing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_status_check_entity_ts",
+      "target": "entities_status_check_entity_statuscheck"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_migrations_1794441600000_initialschema_ts",
+      "target": "migrations_1794441600000_initialschema_initialschema1794441600000"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "migrations_1794441600000_initialschema_initialschema1794441600000",
+      "target": "migrations_1794441600000_initialschema_initialschema1794441600000_up"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/migrations/1794441600000-InitialSchema.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "migrations_1794441600000_initialschema_initialschema1794441600000",
+      "target": "migrations_1794441600000_initialschema_initialschema1794441600000_down"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_platform_mock_main_ts",
+      "target": "src_platform_mock_platform_mock_docs_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_platform_mock_main_ts",
+      "target": "platform_mock_platform_mock_docs_platformmockdocs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_main_ts",
+      "target": "src_platform_mock_platform_mock_module_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_main_ts",
+      "target": "platform_mock_platform_mock_module_platformmockmodule"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_main_ts",
+      "target": "platform_mock_main_bootstrap"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/platform-mock/main.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "platform_mock_main_bootstrap",
+      "target": "platform_mock_platform_mock_docs_platformmockdocs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.docs.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_platform_mock_platform_mock_docs_ts",
+      "target": "platform_mock_platform_mock_docs_platformmockdocs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "src_platform_mock_admin_admin_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "admin_admin_controller_admincontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "src_platform_mock_chaos_chaos_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "chaos_chaos_service_chaosservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "src_platform_mock_listings_listings_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "listings_listings_controller_listingscontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "src_platform_mock_listings_listings_store_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "listings_listings_store_listingsstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "platform_mock_platform_mock_module_mockhealthcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_platform_mock_module_ts",
+      "target": "platform_mock_platform_mock_module_platformmockmodule"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/platform-mock.e2e-spec.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_platform_mock_e2e_spec_ts",
+      "target": "src_platform_mock_platform_mock_module_ts"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/platform-mock.module.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "platform_mock_platform_mock_module_mockhealthcontroller",
+      "target": "platform_mock_platform_mock_module_mockhealthcontroller_health"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/platform-mock.e2e-spec.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_platform_mock_e2e_spec_ts",
+      "target": "platform_mock_platform_mock_module_platformmockmodule"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_admin_admin_controller_ts",
+      "target": "src_platform_mock_chaos_chaos_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_admin_admin_controller_ts",
+      "target": "chaos_chaos_service_chaosservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_admin_admin_controller_ts",
+      "target": "src_platform_mock_listings_listings_store_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_admin_admin_controller_ts",
+      "target": "listings_listings_store_listingsstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_platform_mock_admin_admin_controller_ts",
+      "target": "src_platform_mock_admin_admin_schemas_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_admin_admin_controller_ts",
+      "target": "admin_admin_controller_admincontroller"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_state"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_updatedefaults"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_updatelisting"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_clearlisting"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_setstatus"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_reset"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller",
+      "target": "admin_admin_controller_admincontroller_assertlisting"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller_updatelisting",
+      "target": "admin_admin_controller_admincontroller_assertlisting"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/admin/admin.controller.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "admin_admin_controller_admincontroller_clearlisting",
+      "target": "admin_admin_controller_admincontroller_assertlisting"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_chaos_service_spec_ts",
+      "target": "src_platform_mock_chaos_chaos_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_chaos_service_spec_ts",
+      "target": "chaos_chaos_service_chaosservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.spec.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_chaos_service_spec_ts",
+      "target": "chaos_chaos_service_spec_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_chaos_service_ts",
+      "target": "chaos_chaos_service_chaosservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "src_platform_mock_chaos_chaos_service_ts"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_getstate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_updatedefaults"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_updatelisting"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_clearlisting"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_reset"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_rulefor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_decide"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice",
+      "target": "chaos_chaos_service_chaosservice_initialstate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "chaos_chaos_service_chaosservice"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice_constructor",
+      "target": "chaos_chaos_service_chaosservice_initialstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice_updatedefaults",
+      "target": "chaos_chaos_service_chaosservice_getstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice_updatelisting",
+      "target": "chaos_chaos_service_chaosservice_getstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice_clearlisting",
+      "target": "chaos_chaos_service_chaosservice_getstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice_reset",
+      "target": "chaos_chaos_service_chaosservice_getstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice_reset",
+      "target": "chaos_chaos_service_chaosservice_initialstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/chaos.service.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_chaos_service_chaosservice_decide",
+      "target": "chaos_chaos_service_chaosservice_rulefor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_malformed_payloads_ts",
+      "target": "chaos_malformed_payloads_json"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_malformed_payloads_ts",
+      "target": "chaos_malformed_payloads_malformedstatusbodies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_malformed_payloads_ts",
+      "target": "chaos_malformed_payloads_malformedlistingsbodies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_chaos_malformed_payloads_ts",
+      "target": "chaos_malformed_payloads_pick"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "src_platform_mock_chaos_malformed_payloads_ts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_malformed_payloads_malformedstatusbodies",
+      "target": "chaos_malformed_payloads_json"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/chaos/malformed-payloads.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "chaos_malformed_payloads_malformedlistingsbodies",
+      "target": "chaos_malformed_payloads_json"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "chaos_malformed_payloads_malformedstatusbodies"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "listings_listings_controller_listingscontroller_status",
+      "target": "chaos_malformed_payloads_malformedstatusbodies"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "chaos_malformed_payloads_malformedlistingsbodies"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "listings_listings_controller_listingscontroller_list",
+      "target": "chaos_malformed_payloads_malformedlistingsbodies"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "chaos_malformed_payloads_pick"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "listings_listings_controller_listingscontroller_list",
+      "target": "chaos_malformed_payloads_pick"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "listings_listings_controller_listingscontroller_status",
+      "target": "chaos_malformed_payloads_pick"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "src_platform_mock_listings_listings_schemas_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "src_platform_mock_listings_listings_store_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "listings_listings_store_listingsstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_controller_ts",
+      "target": "listings_listings_controller_listingscontroller"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_controller_listingscontroller",
+      "target": "listings_listings_controller_listingscontroller_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_controller_listingscontroller",
+      "target": "listings_listings_controller_listingscontroller_list"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_controller_listingscontroller",
+      "target": "listings_listings_controller_listingscontroller_status"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.controller.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_controller_listingscontroller_list",
+      "target": "listings_listings_controller_listingscontroller_status"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.schemas.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_platform_mock_listings_listings_schemas_ts",
+      "target": "listings_listings_schemas_localtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.schemas.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_platform_mock_listings_listings_schemas_ts",
+      "target": "listings_listings_schemas_dayslots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_seed_ts",
+      "target": "listings_listings_seed_slot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_seed_ts",
+      "target": "listings_listings_seed_everyday"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.seed.ts",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_seed_ts",
+      "target": "listings_listings_seed_buildseed"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_store_ts",
+      "target": "src_platform_mock_listings_listings_seed_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_store_ts",
+      "target": "listings_listings_seed_buildseed"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "listings_listings_store_listingsstore_constructor",
+      "target": "listings_listings_seed_buildseed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_platform_mock_listings_listings_store_ts",
+      "target": "listings_listings_store_listingsstore"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore",
+      "target": "listings_listings_store_listingsstore_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore",
+      "target": "listings_listings_store_listingsstore_all"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore",
+      "target": "listings_listings_store_listingsstore_has"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore",
+      "target": "listings_listings_store_listingsstore_getstatus"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore",
+      "target": "listings_listings_store_listingsstore_setstatus"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore",
+      "target": "listings_listings_store_listingsstore_allstatuses"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore",
+      "target": "listings_listings_store_listingsstore_resetstatuses"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore_constructor",
+      "target": "listings_listings_store_listingsstore_resetstatuses"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/platform-mock/listings/listings.store.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "listings_listings_store_listingsstore_setstatus",
+      "target": "listings_listings_store_listingsstore_getstatus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "test_openapi_spec_ts",
+      "target": "test_openapi_spec_documentfor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/openapi.spec.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "test_openapi_spec_ts",
+      "target": "test_openapi_spec_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_postman_collection_spec_ts",
+      "target": "test_postman_collection_spec_join"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_postman_collection_spec_ts",
+      "target": "test_postman_collection_spec_controllersof"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_postman_collection_spec_ts",
+      "target": "test_postman_collection_spec_nestroutes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_postman_collection_spec_ts",
+      "target": "test_postman_collection_spec_postmanroutes"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_postman_collection_spec_nestroutes",
+      "target": "test_postman_collection_spec_join"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test/postman-collection.spec.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_postman_collection_spec_nestroutes",
+      "target": "test_postman_collection_spec_controllersof"
+    },
     {
       "relation": "imports_from",
       "context": "import",
@@ -365,5 +3091,6 @@
       "target": "src_main_bootstrap"
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "02b48f7f81f3fa3cc86c9c6058b760964169b00c"
 }

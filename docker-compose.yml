@@ -1,0 +1,84 @@
+name: store-front-sync
+
+x-app: &app
+  build: .
+  image: store-front-sync:local
+  restart: unless-stopped
+
+x-database-url: &database-url
+  DATABASE_URL: postgres://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-app}@db:5432/${POSTGRES_DB:-store_front_sync}
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-app}
+      POSTGRES_DB: ${POSTGRES_DB:-store_front_sync}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      # Named volume: survives `docker compose down` (only `down -v` deletes it).
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  # One-shot: applies pending TypeORM migrations, then exits.
+  migrate:
+    <<: *app
+    restart: "no"
+    command: ["node", "dist/database/migrate.js"]
+    environment:
+      <<: *database-url
+    depends_on:
+      db:
+        condition: service_healthy
+
+  platform-mock:
+    <<: *app
+    command: ["node", "dist/platform-mock/main.js"]
+    environment:
+      PORT: 4000
+      PLATFORM_PUBLIC_URL: ${PLATFORM_PUBLIC_URL:-http://localhost:${PLATFORM_MOCK_PORT:-4000}}
+      CHAOS_LATENCY_MS: ${CHAOS_LATENCY_MS:-0}
+      CHAOS_ERROR_RATE: ${CHAOS_ERROR_RATE:-0}
+      CHAOS_MALFORMED_RATE: ${CHAOS_MALFORMED_RATE:-0}
+    ports:
+      - "${PLATFORM_MOCK_PORT:-4000}:4000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:4000/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    <<: *app
+    command: ["node", "dist/api/main.js"]
+    environment:
+      <<: *database-url
+      PORT: 3000
+      # Browser-facing URLs for the Swagger docs at /docs
+      API_PUBLIC_URL: ${API_PUBLIC_URL:-http://localhost:${API_PORT:-3000}}
+      PLATFORM_MOCK_PUBLIC_URL: ${PLATFORM_PUBLIC_URL:-http://localhost:${PLATFORM_MOCK_PORT:-4000}}
+    ports:
+      - "${API_PORT:-3000}:3000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # worker: added next. It will reuse the same image with
+  #   command: ["node", "dist/worker/main.js"]
+  #   environment: DATABASE_URL, PLATFORM_BASE_URL=http://platform-mock:4000, CHECK_INTERVAL_SECONDS
+  #   depends_on: migrate (completed_successfully), platform-mock (service_started)
+
+volumes:
+  pgdata:
