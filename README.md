@@ -1,9 +1,9 @@
 # store-front-sync
 
 Checks whether restaurant listings on delivery platforms are actually available
-during their opening hours. This is the **foundation**: a mock delivery
-platform, PostgreSQL with automatic migrations, and an API with a health check.
-The worker and the availability/mismatch logic come next.
+during their opening hours. A **worker** polls a (mock) delivery platform on a fixed
+interval, compares each listing's status with its opening hours, and stores every
+mismatch in PostgreSQL. An API exposes a health check.
 
 ## Run it
 
@@ -19,6 +19,7 @@ That's it. No `.env` is needed; every setting has a default (see `.env.example`)
 | `platform-mock` | http://localhost:4000   | Fake delivery platform (Uber Eats / Wolt-style)       |
 | `db`            | `localhost:5432`        | PostgreSQL 17 (`app` / `app`, db `store_front_sync`)  |
 | `migrate`       | –                       | One-shot: applies migrations, then exits              |
+| `worker`        | –                       | Checks every listing every `CHECK_INTERVAL_SECONDS`   |
 
 Data lives in the named volume `pgdata`, so it survives `docker compose down`
 followed by `docker compose up`. Only `docker compose down -v` wipes it.
@@ -31,6 +32,7 @@ docker compose up -d db
 DATABASE_URL=postgres://app:app@localhost:5432/store_front_sync pnpm migrate
 DATABASE_URL=postgres://app:app@localhost:5432/store_front_sync pnpm start:api
 pnpm start:platform-mock
+DATABASE_URL=postgres://app:app@localhost:5432/store_front_sync CHECK_INTERVAL_SECONDS=10 pnpm start:worker
 pnpm test && pnpm test:e2e
 ```
 
@@ -67,6 +69,55 @@ Base URLs are collection variables (`apiBaseUrl`, `mockBaseUrl`, `listingId`).
 `test/postman-collection.spec.ts`, which runs as part of `pnpm test`, reads every route
 from the Nest controllers and fails if one is missing from the collection. See
 [CLAUDE.md](CLAUDE.md) for the full checklist.
+
+## worker
+
+A background process with no HTTP port (`dist/worker/main.js`). Every
+`CHECK_INTERVAL_SECONDS` (default `60`) it runs one **check round**:
+
+1. Read the restaurants and their opening hours from the platform with `GET /listings`.
+   Nothing is saved; the worker only uses them for this round's comparison. A restaurant
+   with unusable data (unknown timezone, a time like `25:99`, missing fields) is left out
+   of the round and logged. If `GET /listings` fails as a whole, there are no opening
+   hours to compare against, so the round is skipped and logged.
+2. For every restaurant, concurrently, read its status with `GET /listings/:id/status`,
+   with a `REQUEST_TIMEOUT_MS` timeout (default `5000`).
+3. If the status request fails (timeout, HTTP error, network error or an unreadable body),
+   the worker logs it and moves on. Nothing is written.
+4. Otherwise, work out whether the listing **should** be open now from
+   its opening hours in its own timezone, and compare that with the reported status:
+
+   | Opening hours say | Platform says     | Result                          |
+   | ----------------- | ----------------- | ------------------------------- |
+   | open              | `OPEN`            | fine                            |
+   | open              | `CLOSED`          | mismatch `closed_during_hours`  |
+   | open              | `PAUSED`          | mismatch `paused_during_hours`  |
+   | closed            | `OPEN`            | mismatch `open_outside_hours`   |
+   | closed            | `CLOSED`/`PAUSED` | fine (nobody can order either way) |
+
+   A mismatch is written as one row to `mismatches`. **That is the only thing the worker
+   writes.** A failed check is never a mismatch, because "couldn't tell" is not "closed".
+
+Timing: the interval runs from the start of one round to the start of the next.
+Rounds never overlap; if one takes longer than the interval, the next starts as soon as
+it ends. On `SIGTERM` the worker finishes the current round, then exits.
+
+Time logic (`src/worker/availability/opening-hours.ts`): slots are `[open, close)` in local
+time. A `close` earlier than `open` runs past midnight, so Saturday 01:30 is covered
+by Friday's `10:30–02:00`. `open == close` means 24 hours. Timezone and DST
+conversion uses `Intl`, so no date library is needed.
+
+Watch it work, with a shorter interval:
+
+```bash
+CHECK_INTERVAL_SECONDS=10 docker compose up -d --build
+docker compose logs -f worker
+# stage a mismatch (Berlin PAUSED during opening hours) and a timeout
+curl -X PUT localhost:4000/admin/listings/lst_ber_001/status -H 'content-type: application/json' -d '{"status":"PAUSED"}'
+curl -X PUT localhost:4000/admin/chaos/listings/lst_vie_002 -H 'content-type: application/json' -d '{"latencyMs":8000}'
+docker compose exec db psql -U app -d store_front_sync   -c "select listing_id, kind, expected_open, actual_status, detected_at from mismatches order by id desc limit 10"
+curl -X POST localhost:4000/admin/reset
+```
 
 ## platform-mock
 
@@ -134,35 +185,46 @@ Migrations are hand-written SQL in `src/database/migrations`, run by the `migrat
 service before `api` starts (`depends_on: service_completed_successfully`).
 `synchronize` is off.
 
-- `listings`: the platform's listings as last seen (opening hours as `jsonb`).
-- `status_checks`: append-only, one row per check: `listing_id, checked_at, outcome,
-  status, http_status, latency_ms, error`. `outcome` is one of `ok | timeout |
-  http_error | network_error | invalid_payload`, and `status` is set only when
-  `outcome = 'ok'` (enforced by a CHECK constraint). It's indexed on
-  `(listing_id, checked_at)`.
+- `listings` and `status_checks` (from the first migration) exist, but the worker
+  doesn't write to them; it reads the listings from the platform every round.
+  - `listings`: `id, name, timezone, listing_url, opening_hours (jsonb)`.
+  - `status_checks`: one row per check: `listing_id, checked_at, outcome,
+    status, http_status, latency_ms, error`. `outcome` is one of `ok | timeout |
+    http_error | network_error | invalid_payload`, and `status` is set only when
+    `outcome = 'ok'` (enforced by a CHECK constraint). It's indexed on
+    `(listing_id, checked_at)`.
+- `mismatches` (written by the worker): append-only, one row per status that
+  contradicts the opening hours: `listing_id, detected_at, expected_open,
+  actual_status, kind`. `listing_id` is the platform's id, with no foreign key. `kind` is one of `open_outside_hours | closed_during_hours |
+  paused_during_hours`, and a CHECK constraint makes sure `kind`, `expected_open` and
+  `actual_status` agree. It's indexed on `(listing_id, detected_at)`.
 
 ## Main choices
 
-- **NestJS + TypeORM, one codebase, three entry points** (`dist/api/main.js`,
-  `dist/platform-mock/main.js`, `dist/database/migrate.js`), **one Docker image**.
-  Compose picks the entry point per service. The worker will be a fourth entry point
-  on the same image. This is simpler than a Nest monorepo and still keeps the mock
+- **NestJS + TypeORM, one codebase, four entry points** (`dist/api/main.js`,
+  `dist/platform-mock/main.js`, `dist/worker/main.js`, `dist/database/migrate.js`),
+  **one Docker image**. Compose picks the entry point per service. The worker is a Nest
+  application context with no HTTP server. This is simpler than a Nest monorepo and still keeps the mock
   a separate service, because it stands in for an external system.
 - **Migrations as a one-shot compose service** rather than on app boot, so the API
   (and later several workers) never race each other to migrate.
-- **Failed checks get stored too.** "We couldn't tell" (timeout, 5xx, garbage) is
-  different from "it was CLOSED". Mixing them up would either hide outages or raise
-  false alarms, so the schema keeps them apart from day one.
+- **A failed check is never a mismatch.** "We couldn't tell" (timeout, 5xx, garbage)
+  is different from "it was CLOSED". Counting it as closed would raise false alarms,
+  so the worker only logs it.
 - **Mock chaos is runtime-controlled** through an admin API (plus env defaults), so
   failures can be switched on and off during a live demo without restarts.
 - **Config is validated with Zod at startup.** Bad env vars fail fast with a readable
   message.
 
+- **The platform is never trusted**: every body is validated with Zod and every
+  request has a timeout. A broken listing is skipped without stopping the
+  others, and a dead list endpoint skips the round without stopping the worker.
+
 ## Not done yet
 
-- `worker`: polls each listing every `CHECK_INTERVAL_SECONDS` and writes `status_checks`.
-  The compose file has a placeholder comment for it.
-- The availability / mismatch logic and the API endpoints for it.
+- API endpoints to read mismatches (e.g. current availability per listing).
+- Grouping consecutive mismatch rows into incidents (start/end), and alerting.
+- Several workers in parallel would need a lock (e.g. `pg_try_advisory_lock`) per round.
 
 ## Time spent and tools
 

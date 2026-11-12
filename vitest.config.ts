@@ -8,5 +8,7 @@ export default defineConfig({
     globals: true,
     root: './',
     include: ['**/*.spec.ts'],
+    // Booting Nest modules (openapi/postman specs) can take >10 s when files run in parallel.
+    hookTimeout: 30_000,
   },
 });

@@ -24,9 +24,19 @@ export const platformMockEnvSchema = z.object({
   CHAOS_MALFORMED_RATE: rate.default(0),
 });
 
+export const workerEnvSchema = databaseEnvSchema.extend({
+  /** Where the worker reaches the delivery platform (inside compose: http://platform-mock:4000). */
+  PLATFORM_BASE_URL: z.url().default('http://localhost:4000'),
+  /** A new check round starts every N seconds. */
+  CHECK_INTERVAL_SECONDS: z.coerce.number().int().min(1).default(60),
+  /** Per-request timeout towards the platform; slower answers are stored as outcome `timeout`. */
+  REQUEST_TIMEOUT_MS: z.coerce.number().int().min(1).default(5000),
+});
+
 export type DatabaseEnv = z.infer<typeof databaseEnvSchema>;
 export type ApiEnv = z.infer<typeof apiEnvSchema>;
 export type PlatformMockEnv = z.infer<typeof platformMockEnvSchema>;
+export type WorkerEnv = z.infer<typeof workerEnvSchema>;
 
 /** Parses env vars against a schema and fails fast with a readable message. */
 export function parseEnv<T extends z.ZodType>(
