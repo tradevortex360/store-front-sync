@@ -1,6 +1,6 @@
 ## Postman collection (required for every endpoint change)
 
-`postman/store-front-sync.postman_collection.json` must cover every HTTP endpoint of every app (api, platform-mock, and later the worker if it exposes any).
+`postman/store-front-sync.postman_collection.json` must cover every HTTP endpoint of every app (api, platform-mock; the worker has none, so add it only if it ever exposes one).
 
 Whenever you add, change, rename or remove an endpoint, in the same change:
 1. Add or update its request in the collection, in the right folder (`api`, `platform-mock/Public`, `platform-mock/Admin`, …). Use `{{apiBaseUrl}}` / `{{mockBaseUrl}}` as host and Postman path variables (`:id`) for route params, matching the Nest route exactly.
