@@ -1,0 +1,369 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "vitest.config.e2e.ts",
+      "file_type": "code",
+      "source_file": "vitest.config.e2e.ts",
+      "source_location": "L1",
+      "id": "vitest_config_e2e_ts",
+      "community": 3,
+      "norm_label": "vitest.config.e2e.ts"
+    },
+    {
+      "label": "vitest.config.ts",
+      "file_type": "code",
+      "source_file": "vitest.config.ts",
+      "source_location": "L1",
+      "id": "vitest_config_ts",
+      "community": 4,
+      "norm_label": "vitest.config.ts"
+    },
+    {
+      "label": "app.controller.spec.ts",
+      "file_type": "code",
+      "source_file": "src/app.controller.spec.ts",
+      "source_location": "L1",
+      "id": "src_app_controller_spec_ts",
+      "community": 0,
+      "norm_label": "app.controller.spec.ts"
+    },
+    {
+      "label": "app.controller.ts",
+      "file_type": "code",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L1",
+      "id": "src_app_controller_ts",
+      "community": 0,
+      "norm_label": "app.controller.ts"
+    },
+    {
+      "label": "AppController",
+      "file_type": "code",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L5",
+      "id": "src_app_controller_appcontroller",
+      "community": 2,
+      "norm_label": "appcontroller"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L6",
+      "id": "src_app_controller_appcontroller_constructor",
+      "community": 2,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".getHello()",
+      "file_type": "code",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L9",
+      "id": "src_app_controller_appcontroller_gethello",
+      "community": 2,
+      "norm_label": ".gethello()"
+    },
+    {
+      "label": "app.module.ts",
+      "file_type": "code",
+      "source_file": "src/app.module.ts",
+      "source_location": "L1",
+      "id": "src_app_module_ts",
+      "community": 1,
+      "norm_label": "app.module.ts"
+    },
+    {
+      "label": "AppModule",
+      "file_type": "code",
+      "source_file": "src/app.module.ts",
+      "source_location": "L10",
+      "id": "src_app_module_appmodule",
+      "community": 1,
+      "norm_label": "appmodule"
+    },
+    {
+      "label": "app.service.ts",
+      "file_type": "code",
+      "source_file": "src/app.service.ts",
+      "source_location": "L1",
+      "id": "src_app_service_ts",
+      "community": 0,
+      "norm_label": "app.service.ts"
+    },
+    {
+      "label": "AppService",
+      "file_type": "code",
+      "source_file": "src/app.service.ts",
+      "source_location": "L4",
+      "id": "src_app_service_appservice",
+      "community": 0,
+      "norm_label": "appservice"
+    },
+    {
+      "label": ".getHello()",
+      "file_type": "code",
+      "source_file": "src/app.service.ts",
+      "source_location": "L5",
+      "id": "src_app_service_appservice_gethello",
+      "community": 0,
+      "norm_label": ".gethello()"
+    },
+    {
+      "label": "main.ts",
+      "file_type": "code",
+      "source_file": "src/main.ts",
+      "source_location": "L1",
+      "id": "src_main_ts",
+      "community": 1,
+      "norm_label": "main.ts"
+    },
+    {
+      "label": "bootstrap()",
+      "file_type": "code",
+      "source_file": "src/main.ts",
+      "source_location": "L4",
+      "id": "src_main_bootstrap",
+      "community": 1,
+      "norm_label": "bootstrap()"
+    },
+    {
+      "label": "app.e2e-spec.ts",
+      "file_type": "code",
+      "source_file": "test/app.e2e-spec.ts",
+      "source_location": "L1",
+      "id": "test_app_e2e_spec_ts",
+      "community": 1,
+      "norm_label": "app.e2e-spec.ts"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_spec_ts",
+      "target": "src_app_controller_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_spec_ts",
+      "target": "src_app_controller_appcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.spec.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_spec_ts",
+      "target": "src_app_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.spec.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_spec_ts",
+      "target": "src_app_service_appservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_ts",
+      "target": "src_app_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_ts",
+      "target": "src_app_service_appservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_ts",
+      "target": "src_app_controller_appcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.module.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_module_ts",
+      "target": "src_app_controller_ts"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_appcontroller",
+      "target": "src_app_controller_appcontroller_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.controller.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_controller_appcontroller",
+      "target": "src_app_controller_appcontroller_gethello"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.module.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_module_ts",
+      "target": "src_app_controller_appcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.module.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_module_ts",
+      "target": "src_app_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.module.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_module_ts",
+      "target": "src_app_service_appservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.module.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_module_ts",
+      "target": "src_app_module_appmodule"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main_ts",
+      "target": "src_app_module_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/app.e2e-spec.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_app_e2e_spec_ts",
+      "target": "src_app_module_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main_ts",
+      "target": "src_app_module_appmodule"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "test/app.e2e-spec.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_app_e2e_spec_ts",
+      "target": "src_app_module_appmodule"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_service_ts",
+      "target": "src_app_service_appservice"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_service_appservice",
+      "target": "src_app_service_appservice_gethello"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main_ts",
+      "target": "src_main_bootstrap"
+    }
+  ],
+  "hyperedges": []
+}
