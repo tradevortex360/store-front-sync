@@ -1,15 +1,5 @@
-import {
-  Column,
-  Entity,
-  Index,
-  JoinColumn,
-  ManyToOne,
-  OneToOne,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
 import type { ListingStatus } from '../../common/listing.types.js';
-import { Listing } from './listing.entity.js';
-import { StatusCheck } from './status-check.entity.js';
 
 /**
  * Ways the platform status can disagree with the opening hours.
@@ -24,7 +14,11 @@ export const MISMATCH_KINDS = [
 ] as const;
 export type MismatchKind = (typeof MISMATCH_KINDS)[number];
 
-/** One row per successful status check whose status contradicts the opening hours. Append-only. */
+/**
+ * One row per status check whose status contradicts the opening hours. Append-only.
+ * The only table the worker writes to. `listing_id` is the platform's id; there is no
+ * foreign key, because the worker reads listings from the platform, not from `listings`.
+ */
 @Entity({ name: 'mismatches' })
 @Index('idx_mismatches_listing_detected_at', ['listingId', 'detectedAt'])
 export class Mismatch {
@@ -34,19 +28,7 @@ export class Mismatch {
   @Column({ name: 'listing_id', type: 'text' })
   listingId: string;
 
-  @ManyToOne(() => Listing, { onDelete: 'CASCADE' })
-  @JoinColumn({ name: 'listing_id' })
-  listing?: Listing;
-
-  /** The status check that found the mismatch (at most one mismatch per check). */
-  @Column({ name: 'status_check_id', type: 'bigint', unique: true })
-  statusCheckId: string;
-
-  @OneToOne(() => StatusCheck, { onDelete: 'CASCADE' })
-  @JoinColumn({ name: 'status_check_id' })
-  statusCheck?: StatusCheck;
-
-  /** Same instant as the status check's `checked_at`. */
+  /** When the status was requested. */
   @Column({ name: 'detected_at', type: 'timestamptz' })
   detectedAt: Date;
 

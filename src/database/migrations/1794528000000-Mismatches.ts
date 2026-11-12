@@ -7,8 +7,8 @@ export class Mismatches1794528000000 implements MigrationInterface {
     await queryRunner.query(`
       CREATE TABLE mismatches (
         id              bigserial PRIMARY KEY,
-        listing_id      text NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
-        status_check_id bigint NOT NULL UNIQUE REFERENCES status_checks(id) ON DELETE CASCADE,
+        -- Platform listing id. No foreign key: the worker doesn't write the listings table.
+        listing_id      text NOT NULL,
         detected_at     timestamptz NOT NULL,
         expected_open   boolean NOT NULL,
         actual_status   varchar(16) NOT NULL

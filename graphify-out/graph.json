@@ -259,7 +259,7 @@
       "label": "Mismatch",
       "file_type": "code",
       "source_file": "src/database/entities/mismatch.entity.ts",
-      "source_location": "L30",
+      "source_location": "L24",
       "id": "entities_mismatch_entity_mismatch",
       "community": 0,
       "norm_label": "mismatch"
@@ -979,7 +979,7 @@
       "label": "listing()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.spec.ts",
-      "source_location": "L24",
+      "source_location": "L22",
       "id": "availability_availability_checker_service_spec_listing",
       "community": 0,
       "norm_label": "listing()"
@@ -988,7 +988,7 @@
       "label": "ok()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.spec.ts",
-      "source_location": "L32",
+      "source_location": "L30",
       "id": "availability_availability_checker_service_spec_ok",
       "community": 0,
       "norm_label": "ok()"
@@ -997,7 +997,7 @@
       "label": "fakeDataSource()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.spec.ts",
-      "source_location": "L40",
+      "source_location": "L38",
       "id": "availability_availability_checker_service_spec_fakedatasource",
       "community": 0,
       "norm_label": "fakedatasource()"
@@ -1006,7 +1006,7 @@
       "label": "fakePlatform()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.spec.ts",
-      "source_location": "L62",
+      "source_location": "L50",
       "id": "availability_availability_checker_service_spec_fakeplatform",
       "community": 0,
       "norm_label": "fakeplatform()"
@@ -1015,7 +1015,7 @@
       "label": "duringHours()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.spec.ts",
-      "source_location": "L76",
+      "source_location": "L64",
       "id": "availability_availability_checker_service_spec_duringhours",
       "community": 0,
       "norm_label": "duringhours()"
@@ -1024,7 +1024,7 @@
       "label": "afterHours()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.spec.ts",
-      "source_location": "L78",
+      "source_location": "L66",
       "id": "availability_availability_checker_service_spec_afterhours",
       "community": 0,
       "norm_label": "afterhours()"
@@ -1042,7 +1042,7 @@
       "label": "AvailabilityChecker",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L33",
+      "source_location": "L29",
       "id": "availability_availability_checker_service_availabilitychecker",
       "community": 8,
       "norm_label": "availabilitychecker"
@@ -1051,7 +1051,7 @@
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L36",
+      "source_location": "L32",
       "id": "availability_availability_checker_service_availabilitychecker_constructor",
       "community": 8,
       "norm_label": ".constructor()"
@@ -1060,25 +1060,16 @@
       "label": ".runRound()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L43",
+      "source_location": "L39",
       "id": "availability_availability_checker_service_availabilitychecker_runround",
       "community": 8,
       "norm_label": ".runround()"
     },
     {
-      "label": ".loadListings()",
-      "file_type": "code",
-      "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L66",
-      "id": "availability_availability_checker_service_availabilitychecker_loadlistings",
-      "community": 8,
-      "norm_label": ".loadlistings()"
-    },
-    {
       "label": ".checkListing()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L99",
+      "source_location": "L72",
       "id": "availability_availability_checker_service_availabilitychecker_checklisting",
       "community": 6,
       "norm_label": ".checklisting()"
@@ -1087,7 +1078,7 @@
       "label": ".logSummary()",
       "file_type": "code",
       "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L149",
+      "source_location": "L105",
       "id": "availability_availability_checker_service_availabilitychecker_logsummary",
       "community": 8,
       "norm_label": ".logsummary()"
@@ -1397,6 +1388,15 @@
       "id": "test_postman_collection_spec_postmanroutes",
       "community": 11,
       "norm_label": "postmanroutes()"
+    },
+    {
+      "label": ".loadListings()",
+      "file_type": "code",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L66",
+      "community": 8,
+      "norm_label": ".loadlistings()",
+      "id": "availability_availability_checker_service_availabilitychecker_loadlistings"
     },
     {
       "label": "app.controller.spec.ts",
@@ -2343,22 +2343,22 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/database/entities/mismatch.entity.ts",
-      "source_location": "L11",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "src_database_entities_mismatch_entity_ts",
+      "source": "src_database_entities_status_check_entity_ts",
       "target": "src_database_entities_listing_entity_ts"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/database/entities/status-check.entity.ts",
-      "source_location": "L10",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "src_database_entities_status_check_entity_ts",
+      "source": "src_database_entities_mismatch_entity_ts",
       "target": "src_database_entities_listing_entity_ts"
     },
     {
@@ -2387,22 +2387,22 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/database/entities/mismatch.entity.ts",
-      "source_location": "L11",
+      "source_file": "src/database/entities/status-check.entity.ts",
+      "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "src_database_entities_mismatch_entity_ts",
+      "source": "src_database_entities_status_check_entity_ts",
       "target": "entities_listing_entity_listing"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/database/entities/status-check.entity.ts",
-      "source_location": "L10",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "src_database_entities_status_check_entity_ts",
+      "source": "src_database_entities_mismatch_entity_ts",
       "target": "entities_listing_entity_listing"
     },
     {
@@ -2426,28 +2426,6 @@
       "confidence_score": 1.0,
       "source": "src_worker_availability_availability_checker_service_ts",
       "target": "entities_listing_entity_listing"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/entities/mismatch.entity.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_database_entities_mismatch_entity_ts",
-      "target": "src_database_entities_status_check_entity_ts"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/entities/mismatch.entity.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_database_entities_mismatch_entity_ts",
-      "target": "entities_status_check_entity_statuscheck"
     },
     {
       "relation": "contains",
@@ -2493,6 +2471,28 @@
       "target": "src_database_entities_mismatch_entity_ts"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "src_database_entities_status_check_entity_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/entities/mismatch.entity.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_entities_mismatch_entity_ts",
+      "target": "entities_status_check_entity_statuscheck"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -2528,17 +2528,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_worker_availability_availability_checker_service_spec_ts",
-      "target": "src_database_entities_status_check_entity_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/worker/availability/availability-checker.service.ts",
       "source_location": "L9",
       "weight": 1.0,
@@ -2555,6 +2544,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_worker_platform_platform_client_ts",
+      "target": "src_database_entities_status_check_entity_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.spec.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_worker_availability_availability_checker_service_spec_ts",
       "target": "src_database_entities_status_check_entity_ts"
     },
     {
@@ -4077,16 +4077,6 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "availability_availability_checker_service_availabilitychecker",
-      "target": "availability_availability_checker_service_availabilitychecker_loadlistings"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "src/worker/availability/availability-checker.service.ts",
       "source_location": "L99",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4104,14 +4094,13 @@
       "target": "availability_availability_checker_service_availabilitychecker_logsummary"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/worker/availability/availability-checker.service.ts",
-      "source_location": "L44",
+      "source_location": "L66",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "availability_availability_checker_service_availabilitychecker_runround",
+      "source": "availability_availability_checker_service_availabilitychecker",
       "target": "availability_availability_checker_service_availabilitychecker_loadlistings"
     },
     {
@@ -4124,6 +4113,17 @@
       "confidence_score": 1.0,
       "source": "availability_availability_checker_service_availabilitychecker_runround",
       "target": "availability_availability_checker_service_availabilitychecker_logsummary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/worker/availability/availability-checker.service.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "availability_availability_checker_service_availabilitychecker_runround",
+      "target": "availability_availability_checker_service_availabilitychecker_loadlistings"
     },
     {
       "relation": "calls",
@@ -4863,5 +4863,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "64e9d99ae3321947554a2c6e56f09897639d552a"
+  "built_at_commit": "77bd1917f56bd5f101af9887d95962af6e43a5d6"
 }

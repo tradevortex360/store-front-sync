@@ -3,9 +3,7 @@ import type {
   OpeningHours,
   PlatformListing,
 } from '../../common/listing.types.js';
-import { Listing } from '../../database/entities/listing.entity.js';
 import { Mismatch } from '../../database/entities/mismatch.entity.js';
-import { StatusCheck } from '../../database/entities/status-check.entity.js';
 import {
   PlatformRequestError,
   type PlatformClient,
@@ -36,27 +34,17 @@ const ok = (status: 'OPEN' | 'CLOSED' | 'PAUSED'): StatusResult => ({
   latencyMs: 5,
 });
 
-/** Records what the checker writes instead of talking to Postgres. */
-function fakeDataSource(storedListings: Listing[] = []) {
+/** Records every insert, per entity, instead of talking to Postgres. */
+function fakeDataSource() {
   const inserts: { entity: unknown; row: Record<string, unknown> }[] = [];
-  const upserts: unknown[] = [];
-  let nextId = 1;
-  const em = {
-    insert: async (entity: unknown, row: Record<string, unknown>) => {
-      inserts.push({ entity, row });
-      return { identifiers: [{ id: String(nextId++) }] };
-    },
-  };
   const dataSource = {
-    getRepository: () => ({
-      upsert: async (rows: unknown) => upserts.push(rows),
-      find: async () => storedListings,
+    getRepository: (entity: unknown) => ({
+      insert: async (row: Record<string, unknown>) => {
+        inserts.push({ entity, row });
+      },
     }),
-    transaction: async (fn: (e: typeof em) => Promise<unknown>) => fn(em),
   } as unknown as DataSource;
-  const rows = (entity: unknown) =>
-    inserts.filter((i) => i.entity === entity).map((i) => i.row);
-  return { dataSource, upserts, rows };
+  return { dataSource, inserts };
 }
 
 function fakePlatform(
@@ -78,7 +66,7 @@ const duringHours = () => new Date('2026-11-13T11:00:00Z');
 const afterHours = () => new Date('2026-11-13T22:00:00Z');
 
 describe('AvailabilityChecker.runRound', () => {
-  it('stores a status check per listing and a mismatch only for contradictions', async () => {
+  it('stores a mismatch only when status and opening hours disagree', async () => {
     const db = fakeDataSource();
     const checker = new AvailabilityChecker(
       fakePlatform([listing('a'), listing('b'), listing('c')], {
@@ -90,24 +78,25 @@ describe('AvailabilityChecker.runRound', () => {
       duringHours,
     );
 
-    const summary = await checker.runRound();
+    await checker.runRound();
 
-    expect(summary.listingsSource).toBe('platform');
-    expect(db.upserts).toHaveLength(1);
-    expect(db.rows(StatusCheck)).toHaveLength(3);
-    expect(db.rows(Mismatch)).toEqual([
+    expect(db.inserts).toEqual([
+      {
+        entity: Mismatch,
+        row: {
+          listingId: 'b',
+          detectedAt: duringHours(),
+          expectedOpen: true,
+          actualStatus: 'PAUSED',
+          kind: 'paused_during_hours',
+        },
+      },
       expect.objectContaining({
-        listingId: 'b',
-        statusCheckId: '2',
-        expectedOpen: true,
-        actualStatus: 'PAUSED',
-        kind: 'paused_during_hours',
-        detectedAt: duringHours(),
-      }),
-      expect.objectContaining({
-        listingId: 'c',
-        statusCheckId: '3',
-        kind: 'closed_during_hours',
+        entity: Mismatch,
+        row: expect.objectContaining({
+          listingId: 'c',
+          kind: 'closed_during_hours',
+        }),
       }),
     ]);
   });
@@ -124,7 +113,7 @@ describe('AvailabilityChecker.runRound', () => {
       afterHours,
     );
     await checker.runRound();
-    expect(db.rows(Mismatch)).toEqual([
+    expect(db.inserts.map((i) => i.row)).toEqual([
       expect.objectContaining({
         listingId: 'a',
         expectedOpen: false,
@@ -133,7 +122,7 @@ describe('AvailabilityChecker.runRound', () => {
     ]);
   });
 
-  it('stores failed checks with their outcome but never as a mismatch', async () => {
+  it('writes nothing for a failed status check', async () => {
     const db = fakeDataSource();
     const checker = new AvailabilityChecker(
       fakePlatform([listing('a')], {
@@ -152,19 +141,11 @@ describe('AvailabilityChecker.runRound', () => {
     expect(summary.results).toEqual([
       { listingId: 'a', outcome: 'timeout', mismatch: null },
     ]);
-    expect(db.rows(StatusCheck)).toEqual([
-      expect.objectContaining({
-        outcome: 'timeout',
-        status: null,
-        error: 'no complete response within 5000 ms',
-      }),
-    ]);
-    expect(db.rows(Mismatch)).toHaveLength(0);
+    expect(db.inserts).toHaveLength(0);
   });
 
-  it('falls back to the stored listings when GET /listings fails', async () => {
-    const stored = Object.assign(new Listing(), listing('a'));
-    const db = fakeDataSource([stored]);
+  it('skips the round when GET /listings fails', async () => {
+    const db = fakeDataSource();
     const checker = new AvailabilityChecker(
       fakePlatform(new PlatformRequestError('http_error', 'HTTP 502', 502, 3), {
         a: ok('CLOSED'),
@@ -173,10 +154,10 @@ describe('AvailabilityChecker.runRound', () => {
       duringHours,
     );
     const summary = await checker.runRound();
-    expect(summary.listingsSource).toBe('database');
-    expect(db.upserts).toHaveLength(0);
-    expect(db.rows(Mismatch)).toEqual([
-      expect.objectContaining({ listingId: 'a', kind: 'closed_during_hours' }),
-    ]);
+    expect(summary).toEqual({
+      skipped: 'GET /listings failed: HTTP 502',
+      results: [],
+    });
+    expect(db.inserts).toHaveLength(0);
   });
 });

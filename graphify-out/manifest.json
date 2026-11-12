@@ -52,8 +52,8 @@
     "hash": "c809311fa2645abd0ead583841611ca0"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\entities\\mismatch.entity.ts": {
-    "mtime": 1794511858.5958593,
-    "hash": "02c4dc66c4125fec625db035ba8532ac"
+    "mtime": 1794515454.8329148,
+    "hash": "18b936615d4af6725143742e972b1987"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\entities\\status-check.entity.ts": {
     "mtime": 1794493918.8464358,
@@ -64,8 +64,8 @@
     "hash": "d55e4c2d0af197f9a3b8d20b3c2a1a9d"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\database\\migrations\\1794528000000-Mismatches.ts": {
-    "mtime": 1794511859.1359813,
-    "hash": "d3576f02b09f61f27deb77d6d4ca3ce2"
+    "mtime": 1794515479.2149913,
+    "hash": "b0c91102b2c0410a73d7c89ff1fed218"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\platform-mock\\main.ts": {
     "mtime": 1794507559.7918391,
@@ -128,12 +128,12 @@
     "hash": "16c9b0cb0c28f6de6daf24b6f7eb3913"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\availability\\availability-checker.service.spec.ts": {
-    "mtime": 1794512898.0694504,
-    "hash": "4c0bfd09b52fb8b5d3b81f1d277f1f0e"
+    "mtime": 1794515505.5303264,
+    "hash": "a1a7e13db79fbd96254d7ff16468b14b"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\availability\\availability-checker.service.ts": {
-    "mtime": 1794512003.4935472,
-    "hash": "73287e2a08283363916405a8f837da1f"
+    "mtime": 1794515480.7279835,
+    "hash": "7db23de9bc2d89c44c83a599ce4c37da"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\src\\worker\\availability\\opening-hours.spec.ts": {
     "mtime": 1794512898.3624408,
@@ -176,7 +176,7 @@
     "hash": "dc91e3bbd46399a4d43125f89ac7ea00"
   },
   "C:\\Users\\Mucrest Technologies\\Documents\\mock-resturant-app\\.claude\\worktrees\\restaurant-availability-setup-a0a981\\README.md": {
-    "mtime": 1794512873.0541399,
-    "hash": "3ca9e0922a38a23b9560a92c49a55c6a"
+    "mtime": 1794515594.9947548,
+    "hash": "84e7cfc6e9f6309968129931e5359e39"
   }
 }

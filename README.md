@@ -3,7 +3,7 @@
 Checks whether restaurant listings on delivery platforms are actually available
 during their opening hours. A **worker** polls a (mock) delivery platform on a fixed
 interval, compares each listing's status with its opening hours, and stores every
-check and every mismatch in PostgreSQL. An API exposes a health check.
+mismatch in PostgreSQL. An API exposes a health check.
 
 ## Run it
 
@@ -75,15 +75,16 @@ from the Nest controllers and fails if one is missing from the collection. See
 A background process with no HTTP port (`dist/worker/main.js`). Every
 `CHECK_INTERVAL_SECONDS` (default `60`) it runs one **check round**:
 
-1. `GET /listings`, then validate each listing (including a real IANA timezone and `HH:mm`
-   times) and upsert it into `listings`. A listing that breaks the contract is skipped
-   and logged. If the whole list is unusable, the round carries on with the
-   **last known listings from the database**.
-2. For every listing, concurrently, `GET /listings/:id/status` with a
-   `REQUEST_TIMEOUT_MS` timeout (default `5000`).
-3. Store one `status_checks` row per listing, failures included, with an outcome:
-   `ok | timeout | http_error | network_error | invalid_payload`.
-4. For a successful check, work out whether the listing **should** be open now from
+1. Read the restaurants and their opening hours from the platform with `GET /listings`.
+   Nothing is saved; the worker only uses them for this round's comparison. A restaurant
+   with unusable data (unknown timezone, a time like `25:99`, missing fields) is left out
+   of the round and logged. If `GET /listings` fails as a whole, there are no opening
+   hours to compare against, so the round is skipped and logged.
+2. For every restaurant, concurrently, read its status with `GET /listings/:id/status`,
+   with a `REQUEST_TIMEOUT_MS` timeout (default `5000`).
+3. If the status request fails (timeout, HTTP error, network error or an unreadable body),
+   the worker logs it and moves on. Nothing is written.
+4. Otherwise, work out whether the listing **should** be open now from
    its opening hours in its own timezone, and compare that with the reported status:
 
    | Opening hours say | Platform says     | Result                          |
@@ -94,8 +95,8 @@ A background process with no HTTP port (`dist/worker/main.js`). Every
    | closed            | `OPEN`            | mismatch `open_outside_hours`   |
    | closed            | `CLOSED`/`PAUSED` | fine (nobody can order either way) |
 
-   A mismatch is written to `mismatches` in the same transaction as its status check.
-   **A failed check is never a mismatch**, because "couldn't tell" is not "closed".
+   A mismatch is written as one row to `mismatches`. **That is the only thing the worker
+   writes.** A failed check is never a mismatch, because "couldn't tell" is not "closed".
 
 Timing: the interval runs from the start of one round to the start of the next.
 Rounds never overlap; if one takes longer than the interval, the next starts as soon as
@@ -184,15 +185,17 @@ Migrations are hand-written SQL in `src/database/migrations`, run by the `migrat
 service before `api` starts (`depends_on: service_completed_successfully`).
 `synchronize` is off.
 
-- `listings`: the platform's listings as last seen (opening hours as `jsonb`).
-- `status_checks`: append-only, one row per check: `listing_id, checked_at, outcome,
-  status, http_status, latency_ms, error`. `outcome` is one of `ok | timeout |
-  http_error | network_error | invalid_payload`, and `status` is set only when
-  `outcome = 'ok'` (enforced by a CHECK constraint). It's indexed on
-  `(listing_id, checked_at)`.
-- `mismatches`: append-only, one row per successful check that contradicts the
-  opening hours: `listing_id, status_check_id (unique), detected_at, expected_open,
-  actual_status, kind`. `kind` is one of `open_outside_hours | closed_during_hours |
+- `listings` and `status_checks` (from the first migration) exist, but the worker
+  doesn't write to them; it reads the listings from the platform every round.
+  - `listings`: `id, name, timezone, listing_url, opening_hours (jsonb)`.
+  - `status_checks`: one row per check: `listing_id, checked_at, outcome,
+    status, http_status, latency_ms, error`. `outcome` is one of `ok | timeout |
+    http_error | network_error | invalid_payload`, and `status` is set only when
+    `outcome = 'ok'` (enforced by a CHECK constraint). It's indexed on
+    `(listing_id, checked_at)`.
+- `mismatches` (written by the worker): append-only, one row per status that
+  contradicts the opening hours: `listing_id, detected_at, expected_open,
+  actual_status, kind`. `listing_id` is the platform's id, with no foreign key. `kind` is one of `open_outside_hours | closed_during_hours |
   paused_during_hours`, and a CHECK constraint makes sure `kind`, `expected_open` and
   `actual_status` agree. It's indexed on `(listing_id, detected_at)`.
 
@@ -205,23 +208,21 @@ service before `api` starts (`depends_on: service_completed_successfully`).
   a separate service, because it stands in for an external system.
 - **Migrations as a one-shot compose service** rather than on app boot, so the API
   (and later several workers) never race each other to migrate.
-- **Failed checks get stored too.** "We couldn't tell" (timeout, 5xx, garbage) is
-  different from "it was CLOSED". Mixing them up would either hide outages or raise
-  false alarms, so the schema keeps them apart from day one.
+- **A failed check is never a mismatch.** "We couldn't tell" (timeout, 5xx, garbage)
+  is different from "it was CLOSED". Counting it as closed would raise false alarms,
+  so the worker only logs it.
 - **Mock chaos is runtime-controlled** through an admin API (plus env defaults), so
   failures can be switched on and off during a live demo without restarts.
 - **Config is validated with Zod at startup.** Bad env vars fail fast with a readable
   message.
 
-- **Mismatches point at the check that found them** instead of being free-floating
-  events, so every alert can be traced to the raw HTTP result and latency behind it.
 - **The platform is never trusted**: every body is validated with Zod and every
-  request has a timeout. A broken listing or a dead list endpoint degrades one
-  listing or falls back to stored data; it never stops the round.
+  request has a timeout. A broken listing is skipped without stopping the
+  others, and a dead list endpoint skips the round without stopping the worker.
 
 ## Not done yet
 
-- API endpoints to read checks and mismatches (e.g. current availability per listing).
+- API endpoints to read mismatches (e.g. current availability per listing).
 - Grouping consecutive mismatch rows into incidents (start/end), and alerting.
 - Several workers in parallel would need a lock (e.g. `pg_try_advisory_lock`) per round.
 
