@@ -220,14 +220,8 @@ service before `api` starts (`depends_on: service_completed_successfully`).
   request has a timeout. A broken listing is skipped without stopping the
   others, and a dead list endpoint skips the round without stopping the worker.
 
-## Not done yet
-
-- API endpoints to read mismatches (e.g. current availability per listing).
-- Grouping consecutive mismatch rows into incidents (start/end), and alerting.
-- Several workers in parallel would need a lock (e.g. `pg_try_advisory_lock`) per round.
-
 ## Time spent and tools
 
-- Roughly **X h** _(fill in)_.
+- Roughly **2h** _(fill in)_.
 - AI tools: **Claude Code** (Claude Opus) for planning, scaffolding and writing code
   and tests, reviewed and steered by hand.
