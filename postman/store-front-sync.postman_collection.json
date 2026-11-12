@@ -1,0 +1,519 @@
+{
+  "info": {
+    "name": "store-front-sync",
+    "description": "Every HTTP endpoint of store-front-sync. Keep in sync with the code: test/postman-collection.spec.ts fails when a route is missing here.\n\nRun all: `pnpm test:postman` (stack must be up via `docker compose up`).\nRequests run top to bottom; admin requests change mock state and the folder ends with a reset.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "apiBaseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "mockBaseUrl",
+      "value": "http://localhost:4000"
+    },
+    {
+      "key": "listingId",
+      "value": "lst_ber_001"
+    }
+  ],
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiBaseUrl}}/health",
+              "host": [
+                "{{apiBaseUrl}}"
+              ],
+              "path": [
+                "health"
+              ]
+            },
+            "description": "200 when the API is up and the database answers, 503 otherwise."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                  "pm.test('database is up', () => pm.expect(pm.response.json().info.database.status).to.eql('up'));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "platform-mock",
+      "item": [
+        {
+          "name": "Public",
+          "item": [
+            {
+              "name": "Health",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/health",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "health"
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "List listings",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/listings",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "listings"
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                      "const body = pm.response.json();",
+                      "pm.test('returns 5 listings', () => pm.expect(body).to.be.an('array').with.lengthOf(5));",
+                      "pm.test('listings match the contract', () => body.forEach((l) => {",
+                      "  pm.expect(l).to.have.all.keys('id', 'name', 'timezone', 'listingUrl', 'openingHours');",
+                      "  pm.expect(l.openingHours).to.have.all.keys('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun');",
+                      "}));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Get listing status",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/listings/:id/status",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "listings",
+                    ":id",
+                    "status"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "{{listingId}}"
+                    }
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                      "pm.test('status is a known value', () => pm.expect(pm.response.json().status).to.be.oneOf(['OPEN', 'CLOSED', 'PAUSED']));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Get listing status (unknown id → 404)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/listings/:id/status",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "listings",
+                    ":id",
+                    "status"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "does-not-exist"
+                    }
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 404', () => pm.response.to.have.status(404));"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Admin",
+          "item": [
+            {
+              "name": "Get state",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/admin/state",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "state"
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                      "pm.test('has chaos and statuses', () => pm.expect(pm.response.json()).to.have.all.keys('chaos', 'statuses'));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Update default chaos",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/admin/chaos",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "chaos"
+                  ]
+                },
+                "description": "Partial rule: latencyMs, errorRate (0..1), errorStatus (400..599), malformedRate (0..1).",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"latencyMs\": 0,\n  \"errorRate\": 0,\n  \"errorStatus\": 503,\n  \"malformedRate\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Update default chaos (invalid → 400)",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/admin/chaos",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "chaos"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"errorRate\": 0.7,\n  \"malformedRate\": 0.7\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 400', () => pm.response.to.have.status(400));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Override chaos for one listing",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/admin/chaos/listings/:id",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "chaos",
+                    "listings",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "{{listingId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"malformedRate\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Status of overridden listing is malformed",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/listings/:id/status",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "listings",
+                    ":id",
+                    "status"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "{{listingId}}"
+                    }
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                      "pm.test('body breaks the contract', () => pm.expect(pm.response.text()).to.not.match(/^\\{\"status\":\"(OPEN|CLOSED|PAUSED)\"\\}$/));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Clear chaos override for one listing",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/admin/chaos/listings/:id",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "chaos",
+                    "listings",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "{{listingId}}"
+                    }
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Force listing status",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/admin/listings/:id/status",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "listings",
+                    ":id",
+                    "status"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "{{listingId}}"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"PAUSED\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                      "pm.test('status was set', () => pm.expect(pm.response.json().status).to.eql('PAUSED'));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Reset mock state",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/admin/reset",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "reset"
+                  ]
+                }
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                      "pm.test('chaos back to defaults', () => pm.expect(pm.response.json().chaos.listings).to.eql({}));"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
