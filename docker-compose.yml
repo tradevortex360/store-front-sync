@@ -75,10 +75,21 @@ services:
       timeout: 3s
       retries: 10
 
-  # worker: added next. It will reuse the same image with
-  #   command: ["node", "dist/worker/main.js"]
-  #   environment: DATABASE_URL, PLATFORM_BASE_URL=http://platform-mock:4000, CHECK_INTERVAL_SECONDS
-  #   depends_on: migrate (completed_successfully), platform-mock (service_started)
+  # Polls the platform every CHECK_INTERVAL_SECONDS and stores status checks + mismatches.
+  # No HTTP port; its health is visible in the logs and the status_checks table.
+  worker:
+    <<: *app
+    command: ["node", "dist/worker/main.js"]
+    environment:
+      <<: *database-url
+      PLATFORM_BASE_URL: http://platform-mock:4000
+      CHECK_INTERVAL_SECONDS: ${CHECK_INTERVAL_SECONDS:-60}
+      REQUEST_TIMEOUT_MS: ${REQUEST_TIMEOUT_MS:-5000}
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      platform-mock:
+        condition: service_healthy
 
 volumes:
   pgdata:
