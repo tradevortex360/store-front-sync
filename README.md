@@ -34,6 +34,23 @@ pnpm start:platform-mock
 pnpm test && pnpm test:e2e
 ```
 
+## API documentation (Swagger)
+
+**http://localhost:3000/docs** is the single place for all API docs. Use the
+**"Select a definition"** dropdown at the top to switch between the `api` and the
+`platform-mock`. Each operation has a description, parameters, request and response
+schemas with examples, and its error cases. "Try it out" sends real requests.
+
+| Service         | Swagger UI                 | Raw OpenAPI 3 document          |
+| --------------- | -------------------------- | ------------------------------- |
+| `api`           | http://localhost:3000/docs | http://localhost:3000/docs-json |
+| `platform-mock` | http://localhost:4000/docs | http://localhost:4000/docs-json |
+
+The docs are generated from the code with `@nestjs/swagger`. Request bodies come from
+the same Zod schemas that validate them, so the docs can't drift from the validation.
+`test/openapi.spec.ts` fails if an operation has no summary, description, tag or
+documented response.
+
 ## Postman collection
 
 [`postman/store-front-sync.postman_collection.json`](postman/store-front-sync.postman_collection.json)

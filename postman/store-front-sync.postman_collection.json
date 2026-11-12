@@ -50,6 +50,38 @@
               }
             }
           ]
+        },
+        {
+          "name": "OpenAPI document",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiBaseUrl}}/docs-json",
+              "host": [
+                "{{apiBaseUrl}}"
+              ],
+              "path": [
+                "docs-json"
+              ]
+            },
+            "description": "Raw OpenAPI 3 document behind the Swagger UI at /docs."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                  "const doc = pm.response.json();",
+                  "pm.test('is an OpenAPI 3 document', () => pm.expect(doc.openapi).to.match(/^3[.]/));",
+                  "pm.test('has the right title', () => pm.expect(doc.info.title).to.eql('store-front-sync api'));",
+                  "pm.test('every operation has a summary', () => Object.values(doc.paths).forEach((item) => Object.values(item).forEach((op) => pm.expect(op.summary).to.be.a('string'))));"
+                ]
+              }
+            }
+          ]
         }
       ]
     },
@@ -81,6 +113,38 @@
                     "type": "text/javascript",
                     "exec": [
                       "pm.test('status is 200', () => pm.response.to.have.status(200));"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "OpenAPI document",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{mockBaseUrl}}/docs-json",
+                  "host": [
+                    "{{mockBaseUrl}}"
+                  ],
+                  "path": [
+                    "docs-json"
+                  ]
+                },
+                "description": "Raw OpenAPI 3 document behind the Swagger UI at /docs."
+              },
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                      "const doc = pm.response.json();",
+                      "pm.test('is an OpenAPI 3 document', () => pm.expect(doc.openapi).to.match(/^3[.]/));",
+                      "pm.test('has the right title', () => pm.expect(doc.info.title).to.eql('platform-mock'));",
+                      "pm.test('every operation has a summary', () => Object.values(doc.paths).forEach((item) => Object.values(item).forEach((op) => pm.expect(op.summary).to.be.a('string'))));"
                     ]
                   }
                 }

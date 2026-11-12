@@ -9,6 +9,9 @@ export const databaseEnvSchema = z.object({
 
 export const apiEnvSchema = databaseEnvSchema.extend({
   PORT: port.default(3000),
+  /** Browser-facing URLs, used only by the Swagger docs ("Try it out", spec selector). */
+  API_PUBLIC_URL: z.url().default('http://localhost:3000'),
+  PLATFORM_MOCK_PUBLIC_URL: z.url().default('http://localhost:4000'),
 });
 
 export const platformMockEnvSchema = z.object({

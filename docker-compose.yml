@@ -43,7 +43,7 @@ services:
     command: ["node", "dist/platform-mock/main.js"]
     environment:
       PORT: 4000
-      PLATFORM_PUBLIC_URL: ${PLATFORM_PUBLIC_URL:-http://localhost:4000}
+      PLATFORM_PUBLIC_URL: ${PLATFORM_PUBLIC_URL:-http://localhost:${PLATFORM_MOCK_PORT:-4000}}
       CHAOS_LATENCY_MS: ${CHAOS_LATENCY_MS:-0}
       CHAOS_ERROR_RATE: ${CHAOS_ERROR_RATE:-0}
       CHAOS_MALFORMED_RATE: ${CHAOS_MALFORMED_RATE:-0}
@@ -61,6 +61,9 @@ services:
     environment:
       <<: *database-url
       PORT: 3000
+      # Browser-facing URLs for the Swagger docs at /docs
+      API_PUBLIC_URL: ${API_PUBLIC_URL:-http://localhost:${API_PORT:-3000}}
+      PLATFORM_MOCK_PUBLIC_URL: ${PLATFORM_PUBLIC_URL:-http://localhost:${PLATFORM_MOCK_PORT:-4000}}
     ports:
       - "${API_PORT:-3000}:3000"
     depends_on:
