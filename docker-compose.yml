@@ -90,6 +90,20 @@ services:
         condition: service_completed_successfully
       platform-mock:
         condition: service_healthy
+  
+  worker2:
+    <<: *app
+    command: ["node", "dist/worker/main.js"]
+    environment:
+      <<: *database-url
+      PLATFORM_BASE_URL: http://platform-mock:5000
+      CHECK_INTERVAL_SECONDS: ${CHECK_INTERVAL_SECONDS:-60}
+      REQUEST_TIMEOUT_MS: ${REQUEST_TIMEOUT_MS:-5000}
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      platform-mock:
+        condition: service_healthy
 
 volumes:
   pgdata:
