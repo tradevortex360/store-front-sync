@@ -1,6 +1,6 @@
 import type { OpeningHours, TimeSlot } from '../../common/listing.types.js';
 import {
-  detectMismatch,
+  compareStatus,
   isValidTimezone,
   isWithinOpeningHours,
   localTimeAt,
@@ -135,18 +135,18 @@ describe('isValidTimezone', () => {
   });
 });
 
-describe('detectMismatch', () => {
+describe('compareStatus', () => {
   it.each([
-    [true, 'OPEN', null],
+    [true, 'OPEN', 'match'],
     [true, 'CLOSED', 'closed_during_hours'],
     [true, 'PAUSED', 'paused_during_hours'],
     [false, 'OPEN', 'open_outside_hours'],
-    [false, 'CLOSED', null],
-    [false, 'PAUSED', null],
+    [false, 'CLOSED', 'match'],
+    [false, 'PAUSED', 'match'],
   ] as const)(
     'expectedOpen=%s, status=%s → %s',
     (expectedOpen, status, kind) => {
-      expect(detectMismatch(expectedOpen, status)).toBe(kind);
+      expect(compareStatus(expectedOpen, status)).toBe(kind);
     },
   );
 });

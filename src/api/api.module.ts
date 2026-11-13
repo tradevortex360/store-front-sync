@@ -4,6 +4,7 @@ import { TerminusModule } from '@nestjs/terminus';
 import { apiEnvSchema, parseEnv } from '../common/env.js';
 import { DatabaseModule } from '../database/database.module.js';
 import { HealthController } from './health/health.controller.js';
+import { MismatchesController } from './mismatches/mismatches.controller.js';
 
 @Module({
   imports: [
@@ -15,6 +16,6 @@ import { HealthController } from './health/health.controller.js';
     DatabaseModule,
     TerminusModule,
   ],
-  controllers: [HealthController],
+  controllers: [HealthController, MismatchesController],
 })
 export class ApiModule {}

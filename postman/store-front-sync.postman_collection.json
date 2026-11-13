@@ -52,6 +52,122 @@
           ]
         },
         {
+          "name": "List mismatches",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiBaseUrl}}/mismatches",
+              "host": [
+                "{{apiBaseUrl}}"
+              ],
+              "path": [
+                "mismatches"
+              ]
+            },
+            "description": "Stored mismatches (comparisons whose result is not `match`), newest first, 100 per page by default."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                  "const body = pm.response.json();",
+                  "pm.test('has total, limit, offset and items', () => { pm.expect(body.total).to.be.a('number'); pm.expect(body.limit).to.be.a('number'); pm.expect(body.offset).to.be.a('number'); pm.expect(body.items).to.be.an('array'); });",
+                  "pm.test('items are mismatches with both times', () => body.items.forEach((m) => { pm.expect(['open_outside_hours', 'closed_during_hours', 'paused_during_hours']).to.include(m.kind); pm.expect(['OPEN', 'CLOSED', 'PAUSED']).to.include(m.actualStatus); pm.expect(m.expectedOpen).to.be.a('boolean'); pm.expect(Date.parse(m.comparedAt)).to.be.at.least(Date.parse(m.checkedAt)); }));",
+                  "pm.test('newest first', () => body.items.forEach((m, i) => i && pm.expect(Date.parse(m.comparedAt)).to.be.at.most(Date.parse(body.items[i - 1].comparedAt))));",
+                  "pm.test('default page', () => { pm.expect(body.limit).to.eql(100); pm.expect(body.offset).to.eql(0); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "List mismatches (filtered)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiBaseUrl}}/mismatches?listingId={{listingId}}&from=2026-01-01T00:00:00Z&limit=5",
+              "host": [
+                "{{apiBaseUrl}}"
+              ],
+              "path": [
+                "mismatches"
+              ],
+              "query": [
+                {
+                  "key": "listingId",
+                  "value": "{{listingId}}"
+                },
+                {
+                  "key": "from",
+                  "value": "2026-01-01T00:00:00Z"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            },
+            "description": "Mismatches of one listing since a given time, 5 per page."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                  "const body = pm.response.json();",
+                  "pm.test('has total, limit, offset and items', () => { pm.expect(body.total).to.be.a('number'); pm.expect(body.limit).to.be.a('number'); pm.expect(body.offset).to.be.a('number'); pm.expect(body.items).to.be.an('array'); });",
+                  "pm.test('items are mismatches with both times', () => body.items.forEach((m) => { pm.expect(['open_outside_hours', 'closed_during_hours', 'paused_during_hours']).to.include(m.kind); pm.expect(['OPEN', 'CLOSED', 'PAUSED']).to.include(m.actualStatus); pm.expect(m.expectedOpen).to.be.a('boolean'); pm.expect(Date.parse(m.comparedAt)).to.be.at.least(Date.parse(m.checkedAt)); }));",
+                  "pm.test('newest first', () => body.items.forEach((m, i) => i && pm.expect(Date.parse(m.comparedAt)).to.be.at.most(Date.parse(body.items[i - 1].comparedAt))));",
+                  "pm.test('only the requested listing', () => body.items.forEach((m) => pm.expect(m.listingId).to.eql(pm.collectionVariables.get('listingId'))));",
+                  "pm.test('limit is applied', () => { pm.expect(body.limit).to.eql(5); pm.expect(body.items.length).to.be.at.most(5); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "List mismatches (invalid kind → 400)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiBaseUrl}}/mismatches?kind=bogus",
+              "host": [
+                "{{apiBaseUrl}}"
+              ],
+              "path": [
+                "mismatches"
+              ],
+              "query": [
+                {
+                  "key": "kind",
+                  "value": "bogus"
+                }
+              ]
+            },
+            "description": "An unknown `kind` (or any other invalid parameter) is rejected with 400."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status is 400', () => pm.response.to.have.status(400));",
+                  "pm.test('error body', () => pm.expect(pm.response.json().statusCode).to.eql(400));"
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "OpenAPI document",
           "request": {
             "method": "GET",
