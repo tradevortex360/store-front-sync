@@ -4,7 +4,7 @@ import {
   type OpeningHours,
   type Weekday,
 } from '../../common/listing.types.js';
-import type { MismatchKind } from '../../database/entities/mismatch.entity.js';
+import type { CheckResult } from '../../database/entities/availability-check.entity.js';
 
 /** Day of week and minute of day as shown on a wall clock in `timezone`. */
 export interface LocalTime {
@@ -98,14 +98,14 @@ export function isWithinOpeningHours(
  * Compares what the platform shows with what the opening hours say.
  * `PAUSED` or `CLOSED` outside hours is fine: customers can't order either way.
  */
-export function detectMismatch(
+export function compareStatus(
   expectedOpen: boolean,
   status: ListingStatus,
-): MismatchKind | null {
+): CheckResult {
   if (expectedOpen) {
     if (status === 'CLOSED') return 'closed_during_hours';
     if (status === 'PAUSED') return 'paused_during_hours';
-    return null;
+    return 'match';
   }
-  return status === 'OPEN' ? 'open_outside_hours' : null;
+  return status === 'OPEN' ? 'open_outside_hours' : 'match';
 }

@@ -3,7 +3,7 @@
 Checks whether restaurant listings on delivery platforms are actually available
 during their opening hours. A **worker** polls a (mock) delivery platform on a fixed
 interval, compares each listing's status with its opening hours, and stores every
-mismatch in PostgreSQL. An API exposes a health check.
+comparison in PostgreSQL. An API serves the mismatches and a health check.
 
 ## Run it
 
@@ -15,7 +15,7 @@ That's it. No `.env` is needed; every setting has a default (see `.env.example`)
 
 | Service         | URL                     | What it is                                            |
 | --------------- | ----------------------- | ----------------------------------------------------- |
-| `api`           | http://localhost:3000   | `GET /health` → `200` when the API and DB are up      |
+| `api`           | http://localhost:3000   | `GET /mismatches`, `GET /health`, docs at `/docs`     |
 | `platform-mock` | http://localhost:4000   | Fake delivery platform (Uber Eats / Wolt-style)       |
 | `db`            | `localhost:5432`        | PostgreSQL 17 (`app` / `app`, db `store_front_sync`)  |
 | `migrate`       | –                       | One-shot: applies migrations, then exits              |
@@ -70,6 +70,19 @@ Base URLs are collection variables (`apiBaseUrl`, `mockBaseUrl`, `listingId`).
 from the Nest controllers and fails if one is missing from the collection. See
 [CLAUDE.md](CLAUDE.md) for the full checklist.
 
+## api
+
+- `GET /health`: `200` when the API and the database are up, `503` otherwise.
+- `GET /mismatches`: the stored mismatches, newest first. Optional filters `listingId`,
+  `kind`, `from` (inclusive) and `to` (exclusive) on `comparedAt` (ISO 8601 with offset),
+  paged with `limit` (1–500, default 100) and `offset`. Returns
+  `{ total, limit, offset, items }`; each item has `id, listingId, checkedAt, comparedAt,
+  expectedOpen, actualStatus, kind`. An invalid or unknown parameter gives `400`.
+
+```bash
+curl 'localhost:3000/mismatches?listingId=lst_ber_001&kind=paused_during_hours&limit=10'
+```
+
 ## worker
 
 A background process with no HTTP port (`dist/worker/main.js`). Every
@@ -84,19 +97,23 @@ A background process with no HTTP port (`dist/worker/main.js`). Every
    with a `REQUEST_TIMEOUT_MS` timeout (default `5000`).
 3. If the status request fails (timeout, HTTP error, network error or an unreadable body),
    the worker logs it and moves on. Nothing is written.
-4. Otherwise, work out whether the listing **should** be open now from
-   its opening hours in its own timezone, and compare that with the reported status:
+4. Otherwise, work out whether the listing **should** be open from its opening hours in
+   its own timezone, at the moment the answer arrived, and compare that with the
+   reported status:
 
-   | Opening hours say | Platform says     | Result                          |
-   | ----------------- | ----------------- | ------------------------------- |
-   | open              | `OPEN`            | fine                            |
-   | open              | `CLOSED`          | mismatch `closed_during_hours`  |
-   | open              | `PAUSED`          | mismatch `paused_during_hours`  |
-   | closed            | `OPEN`            | mismatch `open_outside_hours`   |
-   | closed            | `CLOSED`/`PAUSED` | fine (nobody can order either way) |
+   | Opening hours say | Platform says     | `result`                         |
+   | ----------------- | ----------------- | -------------------------------- |
+   | open              | `OPEN`            | `match`                          |
+   | open              | `CLOSED`          | `closed_during_hours`            |
+   | open              | `PAUSED`          | `paused_during_hours`            |
+   | closed            | `OPEN`            | `open_outside_hours`             |
+   | closed            | `CLOSED`/`PAUSED` | `match` (nobody can order either way) |
 
-   A mismatch is written as one row to `mismatches`. **That is the only thing the worker
-   writes.** A failed check is never a mismatch, because "couldn't tell" is not "closed".
+   Every comparison, match or mismatch, is **inserted** as a new row into
+   `availability_checks`, with `checked_at` (when the status was asked for) and
+   `compared_at` (when it was compared). Rows are never updated. **That is the only
+   thing the worker writes.** A failed check is never compared, because "couldn't tell"
+   is not "closed".
 
 Timing: the interval runs from the start of one round to the start of the next.
 Rounds never overlap; if one takes longer than the interval, the next starts as soon as
@@ -115,7 +132,8 @@ docker compose logs -f worker
 # stage a mismatch (Berlin PAUSED during opening hours) and a timeout
 curl -X PUT localhost:4000/admin/listings/lst_ber_001/status -H 'content-type: application/json' -d '{"status":"PAUSED"}'
 curl -X PUT localhost:4000/admin/chaos/listings/lst_vie_002 -H 'content-type: application/json' -d '{"latencyMs":8000}'
-docker compose exec db psql -U app -d store_front_sync   -c "select listing_id, kind, expected_open, actual_status, detected_at from mismatches order by id desc limit 10"
+docker compose exec db psql -U app -d store_front_sync -c "select listing_id, result, expected_open, actual_status, checked_at, compared_at from availability_checks order by id desc limit 10"
+curl localhost:3000/mismatches
 curl -X POST localhost:4000/admin/reset
 ```
 
@@ -193,11 +211,15 @@ service before `api` starts (`depends_on: service_completed_successfully`).
     http_error | network_error | invalid_payload`, and `status` is set only when
     `outcome = 'ok'` (enforced by a CHECK constraint). It's indexed on
     `(listing_id, checked_at)`.
-- `mismatches` (written by the worker): append-only, one row per status that
-  contradicts the opening hours: `listing_id, detected_at, expected_open,
-  actual_status, kind`. `listing_id` is the platform's id, with no foreign key. `kind` is one of `open_outside_hours | closed_during_hours |
-  paused_during_hours`, and a CHECK constraint makes sure `kind`, `expected_open` and
-  `actual_status` agree. It's indexed on `(listing_id, detected_at)`.
+- `availability_checks` (written by the worker): append-only, one row per comparison:
+  `listing_id, checked_at, compared_at, expected_open, actual_status, result`.
+  `listing_id` is the platform's id, with no foreign key. `result` is one of `match |
+  open_outside_hours | closed_during_hours | paused_during_hours`. CHECK constraints make
+  sure `result`, `expected_open` and `actual_status` agree, and that `compared_at` is not
+  before `checked_at`. Indexed on `(listing_id, compared_at)`, plus a partial index on
+  `compared_at` for the mismatch rows that `GET /mismatches` reads.
+- The earlier `mismatches` table is dropped by the `AvailabilityChecks` migration; its
+  `down` recreates it from the mismatch rows.
 
 ## Main choices
 
@@ -220,14 +242,8 @@ service before `api` starts (`depends_on: service_completed_successfully`).
   request has a timeout. A broken listing is skipped without stopping the
   others, and a dead list endpoint skips the round without stopping the worker.
 
-## Not done yet
-
-- API endpoints to read mismatches (e.g. current availability per listing).
-- Grouping consecutive mismatch rows into incidents (start/end), and alerting.
-- Several workers in parallel would need a lock (e.g. `pg_try_advisory_lock`) per round.
-
 ## Time spent and tools
 
-- Roughly **X h** _(fill in)_.
+- Roughly **2h** _(fill in)_.
 - AI tools: **Claude Code** (Claude Opus) for planning, scaffolding and writing code
   and tests, reviewed and steered by hand.

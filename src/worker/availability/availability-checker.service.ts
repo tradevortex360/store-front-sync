@@ -2,17 +2,18 @@ import { Logger } from '@nestjs/common';
 import type { DataSource } from 'typeorm';
 import type { PlatformListing } from '../../common/listing.types.js';
 import {
-  Mismatch,
-  type MismatchKind,
-} from '../../database/entities/mismatch.entity.js';
+  AvailabilityCheck,
+  type CheckResult,
+} from '../../database/entities/availability-check.entity.js';
 import type { CheckOutcome } from '../../database/entities/status-check.entity.js';
 import type { PlatformClient } from '../platform/platform.client.js';
-import { detectMismatch, isWithinOpeningHours } from './opening-hours.js';
+import { compareStatus, isWithinOpeningHours } from './opening-hours.js';
 
 export interface ListingCheckResult {
   listingId: string;
   outcome: CheckOutcome;
-  mismatch: MismatchKind | null;
+  /** The comparison result; null when the status request failed and nothing was compared. */
+  result: CheckResult | null;
 }
 
 export interface RoundSummary {
@@ -23,8 +24,8 @@ export interface RoundSummary {
 
 /**
  * One check round: read the listings and their opening hours from the platform, ask for
- * each listing's status, compare the two and store a row in `mismatches` when they
- * disagree. Nothing else is written to the database.
+ * each listing's status, compare the two and insert one row into `availability_checks`
+ * per comparison, match or mismatch. Rows are only ever inserted, never updated.
  */
 export class AvailabilityChecker {
   private readonly logger = new Logger(AvailabilityChecker.name);
@@ -62,7 +63,7 @@ export class AvailabilityChecker {
       if (s.status === 'fulfilled') results.push(s.value);
       else
         this.logger.error(
-          `could not store the mismatch for ${listings[i].id}: ${String(s.reason)}`,
+          `could not store the comparison for ${listings[i].id}: ${String(s.reason)}`,
         );
     });
     this.logSummary(listings.length, results);
@@ -73,33 +74,35 @@ export class AvailabilityChecker {
     listing: PlatformListing,
   ): Promise<ListingCheckResult> {
     const checkedAt = this.now();
-    const result = await this.platform.fetchStatus(listing.id);
+    const response = await this.platform.fetchStatus(listing.id);
 
-    // Only a successful check can be a mismatch. "Couldn't tell" is not "closed".
-    if (result.outcome !== 'ok') {
-      this.logger.warn(`${listing.id}: ${result.outcome}: ${result.error}`);
-      return { listingId: listing.id, outcome: result.outcome, mismatch: null };
+    // Only a successful check can be compared. "Couldn't tell" is not "closed".
+    if (response.outcome !== 'ok') {
+      this.logger.warn(`${listing.id}: ${response.outcome}: ${response.error}`);
+      return { listingId: listing.id, outcome: response.outcome, result: null };
     }
 
+    // Compare at the moment the status was known, not when it was asked for.
+    const comparedAt = this.now();
     const expectedOpen = isWithinOpeningHours(
       listing.openingHours,
       listing.timezone,
-      checkedAt,
+      comparedAt,
     );
-    const mismatch = detectMismatch(expectedOpen, result.status);
-    if (mismatch) {
-      await this.dataSource.getRepository(Mismatch).insert({
-        listingId: listing.id,
-        detectedAt: checkedAt,
-        expectedOpen,
-        actualStatus: result.status,
-        kind: mismatch,
-      });
+    const result = compareStatus(expectedOpen, response.status);
+    await this.dataSource.getRepository(AvailabilityCheck).insert({
+      listingId: listing.id,
+      checkedAt,
+      comparedAt,
+      expectedOpen,
+      actualStatus: response.status,
+      result,
+    });
+    if (result !== 'match')
       this.logger.warn(
-        `MISMATCH ${listing.id}: platform says ${result.status}, opening hours say ${expectedOpen ? 'open' : 'closed'} (${mismatch})`,
+        `MISMATCH ${listing.id}: platform says ${response.status}, opening hours say ${expectedOpen ? 'open' : 'closed'} (${result})`,
       );
-    }
-    return { listingId: listing.id, outcome: 'ok', mismatch };
+    return { listingId: listing.id, outcome: 'ok', result };
   }
 
   private logSummary(total: number, results: ListingCheckResult[]) {
@@ -107,9 +110,12 @@ export class AvailabilityChecker {
     for (const r of results)
       outcomes.set(r.outcome, (outcomes.get(r.outcome) ?? 0) + 1);
     const breakdown = [...outcomes].map(([k, v]) => `${v} ${k}`).join(', ');
-    const mismatches = results.filter((r) => r.mismatch).length;
+    const matches = results.filter((r) => r.result === 'match').length;
+    const mismatches = results.filter(
+      (r) => r.result && r.result !== 'match',
+    ).length;
     this.logger.log(
-      `round done: ${total} listings, ${breakdown || 'no checks'}, ${mismatches} mismatch(es) stored`,
+      `round done: ${total} listings, ${breakdown || 'no checks'}; stored ${matches} match(es), ${mismatches} mismatch(es)`,
     );
   }
 }
