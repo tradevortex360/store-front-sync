@@ -3,7 +3,7 @@ import type {
   OpeningHours,
   PlatformListing,
 } from '../../common/listing.types.js';
-import { Mismatch } from '../../database/entities/mismatch.entity.js';
+import { AvailabilityCheck } from '../../database/entities/availability-check.entity.js';
 import {
   PlatformRequestError,
   type PlatformClient,
@@ -42,6 +42,9 @@ function fakeDataSource() {
       insert: async (row: Record<string, unknown>) => {
         inserts.push({ entity, row });
       },
+      update: () => {
+        throw new Error('the worker must never update rows');
+      },
     }),
   } as unknown as DataSource;
   return { dataSource, inserts };
@@ -65,8 +68,11 @@ const duringHours = () => new Date('2026-11-13T11:00:00Z');
 // Friday 2026-11-13 23:00 in Berlin: outside opening hours.
 const afterHours = () => new Date('2026-11-13T22:00:00Z');
 
+const rows = (db: ReturnType<typeof fakeDataSource>) =>
+  db.inserts.map((i) => i.row);
+
 describe('AvailabilityChecker.runRound', () => {
-  it('stores a mismatch only when status and opening hours disagree', async () => {
+  it('inserts one row per comparison during hours, matches included', async () => {
     const db = fakeDataSource();
     const checker = new AvailabilityChecker(
       fakePlatform([listing('a'), listing('b'), listing('c')], {
@@ -80,28 +86,28 @@ describe('AvailabilityChecker.runRound', () => {
 
     await checker.runRound();
 
-    expect(db.inserts).toEqual([
+    expect(db.inserts.every((i) => i.entity === AvailabilityCheck)).toBe(true);
+    expect(rows(db)).toEqual([
       {
-        entity: Mismatch,
-        row: {
-          listingId: 'b',
-          detectedAt: duringHours(),
-          expectedOpen: true,
-          actualStatus: 'PAUSED',
-          kind: 'paused_during_hours',
-        },
+        listingId: 'a',
+        checkedAt: duringHours(),
+        comparedAt: duringHours(),
+        expectedOpen: true,
+        actualStatus: 'OPEN',
+        result: 'match',
       },
       expect.objectContaining({
-        entity: Mismatch,
-        row: expect.objectContaining({
-          listingId: 'c',
-          kind: 'closed_during_hours',
-        }),
+        listingId: 'b',
+        result: 'paused_during_hours',
+      }),
+      expect.objectContaining({
+        listingId: 'c',
+        result: 'closed_during_hours',
       }),
     ]);
   });
 
-  it('flags OPEN outside opening hours, and accepts CLOSED/PAUSED then', async () => {
+  it('flags OPEN outside opening hours, and records CLOSED/PAUSED then as matches', async () => {
     const db = fakeDataSource();
     const checker = new AvailabilityChecker(
       fakePlatform([listing('a'), listing('b'), listing('c')], {
@@ -113,12 +119,40 @@ describe('AvailabilityChecker.runRound', () => {
       afterHours,
     );
     await checker.runRound();
-    expect(db.inserts.map((i) => i.row)).toEqual([
+    expect(rows(db)).toEqual([
       expect.objectContaining({
         listingId: 'a',
         expectedOpen: false,
-        kind: 'open_outside_hours',
+        result: 'open_outside_hours',
       }),
+      expect.objectContaining({ listingId: 'b', result: 'match' }),
+      expect.objectContaining({ listingId: 'c', result: 'match' }),
+    ]);
+  });
+
+  it('compares at the time the answer arrived, not when it was asked for', async () => {
+    const db = fakeDataSource();
+    // Asked at 21:59:58 Berlin (open), answered at 22:00:01 (closed).
+    const times = [
+      new Date('2026-11-13T20:59:58Z'),
+      new Date('2026-11-13T21:00:01Z'),
+    ];
+    const clock = () => times.shift()!;
+    const checker = new AvailabilityChecker(
+      fakePlatform([listing('a')], { a: ok('CLOSED') }),
+      db.dataSource,
+      clock,
+    );
+    await checker.runRound();
+    expect(rows(db)).toEqual([
+      {
+        listingId: 'a',
+        checkedAt: new Date('2026-11-13T20:59:58Z'),
+        comparedAt: new Date('2026-11-13T21:00:01Z'),
+        expectedOpen: false,
+        actualStatus: 'CLOSED',
+        result: 'match',
+      },
     ]);
   });
 
@@ -139,7 +173,7 @@ describe('AvailabilityChecker.runRound', () => {
     );
     const summary = await checker.runRound();
     expect(summary.results).toEqual([
-      { listingId: 'a', outcome: 'timeout', mismatch: null },
+      { listingId: 'a', outcome: 'timeout', result: null },
     ]);
     expect(db.inserts).toHaveLength(0);
   });
